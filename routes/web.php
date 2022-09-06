@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AdController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PublicController;
 
@@ -15,3 +16,5 @@ use App\Http\Controllers\PublicController;
 */
 
 Route::get('/', [PublicController::class, 'homepage'])->name('homepage');
+//ROTTA CON FORM PER AGGIUNGERE UN ANNUNCIO 
+Route::get('/ad/create',[AdController::class,'create'])->name('ad.create');
