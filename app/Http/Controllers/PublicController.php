@@ -2,11 +2,16 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Ad;
 use Illuminate\Http\Request;
 
 class PublicController extends Controller
 {
     public function homepage() {
-        return view('welcome');
+
+        $ads = Ad::all(); 
+
+        return view('welcome', compact('ads'));
+
     }
 }

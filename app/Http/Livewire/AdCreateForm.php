@@ -17,14 +17,16 @@ class AdCreateForm extends Component
     public $category;
     
     protected $rules=[
-      'title'=>'required',
-      'description'=>'required',
+      'title'=>'required|min:5',
+      'description'=>'required|min:10',
       'image'=>'required',
       'price'=>'required',
       'category'=>'required',
-
     ];
 
+    public function updated($propertyName) { 
+        $this->validateOnly($propertyName); 
+    }
 
     public function store(){
         $this->validate();

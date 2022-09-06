@@ -2,26 +2,16 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\ad;
+use App\Models\Ad;
 use Illuminate\Http\Request;
 
 class AdController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index()
-    {
-        //
+    
+    public function __construct(){
+        $this->middleware('auth')->except('ad.create');
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function create()
     {
         return view('ad.create');
@@ -41,21 +31,22 @@ class AdController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\ad  $ad
+     * @param  \App\Models\Ad  $ad
      * @return \Illuminate\Http\Response
      */
-    public function show(ad $ad)
-    {
-        //
+    public function show(Ad $ad){
+        
+        return view('ad.show', compact('ad'));
+
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\ad  $ad
+     * @param  \App\Models\Ad  $ad
      * @return \Illuminate\Http\Response
      */
-    public function edit(ad $ad)
+    public function edit(Ad $ad)
     {
         //
     }
@@ -64,10 +55,10 @@ class AdController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\ad  $ad
+     * @param  \App\Models\Ad  $ad
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, ad $ad)
+    public function update(Request $request, Ad $ad)
     {
         //
     }
@@ -75,10 +66,10 @@ class AdController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\ad  $ad
+     * @param  \App\Models\Ad  $ad
      * @return \Illuminate\Http\Response
      */
-    public function destroy(ad $ad)
+    public function destroy(Ad $ad)
     {
         //
     }
