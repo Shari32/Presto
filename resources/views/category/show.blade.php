@@ -1,12 +1,11 @@
 <x-layout>
 
-    <x-header>Presto.it</x-header>
-
+    <x-header>Esplora la categoria {{$category->category}}</x-header>
 
     <div class="container my-5">
         <div class="row justify-content-center">
 
-            @forelse($ads as $ad)
+            @forelse($category->ads as $ad)
                 <div class="col-12 col-md-3">
                     <div class="card">
                         {{-- unisce la funzione isset() con l'operatore ternario --}}
@@ -29,6 +28,7 @@
                 </div>
             @empty
                 <h2>Non ci sono ancora articoli</h2>
+                
             @endforelse
 
         </div>
