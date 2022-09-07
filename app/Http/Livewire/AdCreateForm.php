@@ -5,6 +5,7 @@ namespace App\Http\Livewire;
 use App\Models\ad;
 use Livewire\Component;
 use Livewire\WithFileUploads;
+use Illuminate\Support\Facades\Auth;
 
 class AdCreateForm extends Component
 { 
@@ -36,7 +37,9 @@ class AdCreateForm extends Component
             'description'=> $this->description,
             'image'=> $this->image->store('public/image'),
             'price'=> $this->price,
-            'category'=>$this->category
+            'category'=>$this->category,
+
+            'user_id' => Auth::user()->id
         ]);
 
      $this->reset();
