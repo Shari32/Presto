@@ -17,5 +17,6 @@ use App\Http\Controllers\PublicController;
 
 Route::get('/', [PublicController::class, 'homepage'])->name('homepage');
 //ROTTA CON FORM PER AGGIUNGERE UN ANNUNCIO 
-Route::get('/ad/create',[AdController::class,'create'])->name('ad.create');
+
+Route::get('/ad/create',[AdController::class,'create'])->middleware('auth')->name('ad.create');
 Route::get('/ad/show/{ad}', [AdController::class, 'show'])->name('ad.show');

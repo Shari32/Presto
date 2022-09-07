@@ -7,10 +7,7 @@ use Illuminate\Http\Request;
 
 class AdController extends Controller
 {
-    
-    public function __construct(){
-        $this->middleware('auth')->except('ad.create');
-    }
+
 
     public function create()
     {

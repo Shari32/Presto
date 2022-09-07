@@ -13,13 +13,9 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('ads', function (Blueprint $table) {
-            $table->id();
-            $table->string('title');
-            $table->longText('description');
-            $table->string('image')->nullable();
-            $table->string('price');
-            $table->timestamps();
+        Schema::table('ads', function (Blueprint $table) {
+            $table->unsignedBigInteger('category_id')->nullable()->after('price');
+            $table->foreign('category_id')->references('id')->on('categories');
         });
     }
 
@@ -30,6 +26,9 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('ads');
+        Schema::table('ads', function (Blueprint $table) {
+            $table->dropForeign(['category_id']);
+            $table->dropColumn('category_id');
+        });
     }
 };

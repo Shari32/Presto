@@ -14,8 +14,8 @@ return new class extends Migration
     public function up()
     {
         Schema::table('ads', function (Blueprint $table) {
-            $table->unsignedBigInteger('user_id')->nullable()->after('category');
-            $table->foreign('user_id')->references('id')->on('users');
+            $table->unsignedBigInteger('user_id')->nullable()->after('price');
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
         });
     }
 
