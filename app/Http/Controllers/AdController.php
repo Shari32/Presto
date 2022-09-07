@@ -7,7 +7,13 @@ use Illuminate\Http\Request;
 
 class AdController extends Controller
 {
+   
+    public function index(){
 
+        $ads=Ad::paginate(1);
+  
+          return view('ad.index',compact('ads'));
+      }
 
     public function create()
     {

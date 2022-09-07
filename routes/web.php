@@ -21,3 +21,5 @@ Route::get('/category/{category}', [PublicController::class, 'show'])->name('cat
 
 Route::get('/ad/create',[AdController::class,'create'])->middleware('auth')->name('ad.create');
 Route::get('/ad/show/{ad}', [AdController::class, 'show'])->name('ad.show');
+
+Route::get('/ad/index', [AdController::class,'index'])->name('ad.index');

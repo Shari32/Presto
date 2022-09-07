@@ -11,13 +11,13 @@
                 <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-inner">
                       <div class="carousel-item active">
-                        <img src="{{Storage::url($ad->image)}}" class="d-block w-100" alt="{{ $ad->title }}">
+                        <img src="{{Storage::url($ad->image)}}" class="d-block vw-50" alt="{{ $ad->title }}">
                       </div>
                       <div class="carousel-item">
-                        <img src="https://picsum.photos/200/300" class="d-block w-100" alt="{{ $ad->title }}">
+                        <img src="https://picsum.photos/200/300" class="d-block vw-50 " alt="{{ $ad->title }}">
                       </div>
                       <div class="carousel-item">
-                        <img src="https://picsum.photos/200/400" class="d-block w-100" alt="{{ $ad->title }}">
+                        <img src="https://picsum.photos/200/400" class="d-block vw-50" alt="{{ $ad->title }}">
                       </div>
                     </div>
                     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
@@ -47,3 +47,4 @@
     </div>
 
 </x-layout>
+
