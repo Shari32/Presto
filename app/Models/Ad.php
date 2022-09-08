@@ -2,16 +2,18 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Laravel\Scout\Searchable;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Ad extends Model
 {
     use HasFactory;
+    use Searchable;
 
-    protected $fillable=
+    protected $fillable =
 
-    [   
+    [
         'title',
         'description',
         'image',
@@ -20,22 +22,38 @@ class Ad extends Model
         'user_id'
     ];
 
-    public function category( ) { 
+    public function toSearchableArray()
+    {
+        $category = $this->category;
+        // $array = [
+        //     'title' => $this->title,
+        //     'category_id' => $category,
+        //     'user_id' => $this->user_id,
+        //     'price' => $this->price
+        // ];
+
+        // return $array;
+    }
+
+    public function category()
+    {
         return $this->belongsTo(Category::class);
     }
 
-    public function user( ) { 
+    public function user()
+    {
         return $this->belongsTo(User::class);
     }
 
-    public function setAccepted($value){
+    public function setAccepted($value)
+    {
         $this->is_accepted = $value;
         $this->save();
         return true;
     }
 
-    public static function toBeRevisionedCount(){
+    public static function toBeRevisionedCount()
+    {
         return Ad::where('is_accepted', null)->count();
     }
-
 }

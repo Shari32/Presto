@@ -1,10 +1,10 @@
 <x-layout>
- <x-header> Tutti gli annunci </x-header>
+    <x-header> Tutti gli annunci </x-header>
 
- <div class="container my-5">
+    <div class="container my-5">
         <div class="row justify-content-center">
 
-            @foreach($ads as $ad)
+            @forelse ($ads as $ad)
                 <div class="col-12 col-md-3">
                     <div class="card">
                         {{-- unisce la funzione isset() con l'operatore ternario --}}
@@ -20,13 +20,18 @@
                             <h5 class="card-user">Venditore: {{ $ad->user->name ?? 'sconosciuto' }}</h5>
                             <p class="card-footer">Pubblicato il: {{ $ad->created_at->format('d/m/Y') }}</p>
                             <hr>
-                            <a href="{{ route('homepage')}}" class="btn btn-info mt-3">Torna alla home</a>
+                            <a href="{{ route('homepage') }}" class="btn btn-info mt-3">Torna alla home</a>
                         </div>
                     </div>
                 </div>
-          
-            @endforeach
-            {{$ads->links()}}
+            @empty
+                <div class="col-12">
+                    <div class="alert alert-warning py-3 shadow">
+                        <p class="lead">Non ci sono annunci per questa ricerca. Prova a cambiare ricerca</p>
+                    </div>
+                </div>
+            @endforelse
+            {{ $ads->links() }}
 
         </div>
     </div>
@@ -37,4 +42,3 @@
 
 
 </x-layout>
-
