@@ -9,6 +9,10 @@
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
        
             <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="{{ route('ad.create') }}">Inserisci Annuncio</a>
+            </li>
+
+            <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="{{route('ad.index')}}">Tutti gli annunci</a>
             </li>
             
@@ -34,7 +38,7 @@
         <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
             aria-expanded="false">
-            Benvenuto Ospite
+            Profilo utente
         </a>
         <ul class="dropdown-menu">
             <li><a class="dropdown-item" href="{{ route('register') }}">Registrati</a></li>
@@ -50,9 +54,7 @@
     </a>
     <ul class="dropdown-menu">
         <li><a class="dropdown-item" href="#">Profilo</a></li>
-        <li class="nav-item">
-            <a class="dropdown-item"  href="{{ route('ad.create') }}">Inserisci Annuncio</a>
-        </li>
+        
         <li><a class="dropdown-item" href="#"
             onclick="event.preventDefault(); document.querySelector('#form-logout').submit();">Esci</a>
         </li>

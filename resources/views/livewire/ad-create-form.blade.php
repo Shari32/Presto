@@ -77,7 +77,7 @@
 
 
 
-                    <button type="submit" class="btn btn-warning">Invia!</button>
+                    <button type="submit" class="btn btn-warning">Inserisci annuncio</button>
     </form>
 </div>
 

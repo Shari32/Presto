@@ -14,11 +14,10 @@
                         <div class="card-body">
                             <h6 class="card-description fst-italic text-muted">{{ $ad->description }}</h6>
                             <hr>
-                             <p class="my-3">Redatto da: <span class="fst-italic text-muted">{{$ad->user->name ?? 'Sconosciuto'}}</span></p> 
-                            <h5 class="card-price">{{ $ad->price }}</h5>
+                            <h5 class="card-price">{{ $ad->price }}€</h5>
                             <h5 class="card-category">{{ $ad->category->category }}</h5>
                             <hr>
-                            <h5 class="card-user">{{ $ad->user->name ?? 'sconosciuto' }}</h5>
+                            <h5 class="card-user">Venditore: {{ $ad->user->name ?? 'sconosciuto' }}</h5>
                             <p class="card-footer">Pubblicato il: {{ $ad->created_at->format('d/m/Y') }}</p>
                             <hr>
                             <a href="{{ route('homepage')}}" class="btn btn-info mt-3">Torna alla home</a>
