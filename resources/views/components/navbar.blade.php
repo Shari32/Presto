@@ -38,7 +38,7 @@
         <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
             aria-expanded="false">
-            Profilo utente
+            Account
         </a>
         <ul class="dropdown-menu">
             <li><a class="dropdown-item" href="{{ route('register') }}">Registrati</a></li>
@@ -62,7 +62,21 @@
             @csrf
         </form>
     </ul>
-</li>
+    </li>
+
+    @if (Auth::user()->is_revisor)
+        <li class="nav-item">
+            <a class="nav-link btn btn-outline-success btn-sm position-relative" 
+            aria-current="page" href="{{route('revisor.index')}}" >
+                Zona Revisore
+                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                    {{App\Models\Ad::toBeRevisionedCount()}}
+                    <span class="visually-hidden">unread messages</span>
+                </span>
+            </a>
+        </li>
+    @endif
+
 @endguest
 
 </ul>

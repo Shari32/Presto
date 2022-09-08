@@ -22,7 +22,7 @@ class AdCreateForm extends Component
         'title' => 'required|min:5',
         'description' => 'required|min:10',
         'image' => 'required',
-        'price' => 'required | numeric | digits_between: 0,8',
+        'price' => 'required | numeric',
         'category' => 'required'
     ];
 

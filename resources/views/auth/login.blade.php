@@ -26,6 +26,7 @@
                     </div>
                     
                     <button type="submit" class="btn btn-warning">Accedi</button>
+                    <a href="{{route('register')}}" class="btn btn-access">Registrati</a>
                 </form>
                 
             </div>

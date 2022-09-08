@@ -2,9 +2,14 @@
 
     <x-header>Presto.it</x-header>
 
-
     <div class="container my-5">
         <div class="row justify-content-center">
+
+            @if(session()->has('access.denied'))
+                <div class="alert alert-danger">
+                    {{ session()->get('access.denied') }}
+                </div>
+            @endif
 
             @forelse($ads as $ad)
                 <div class="col-12 col-md-3">

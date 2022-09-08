@@ -49,7 +49,7 @@
                     <div class="mb-3">
 
                         <label for="price" class="form-label">Prezzo</label>
-                        <input type="text" name="price" wire:model="price"
+                        <input type="number" name="price" wire:model="price" min="0.00" max="100000.00" step="0.01"
                             class="form-control @error('author') is-invalid @enderror" id="price"
                             aria-describedby="priceHelp">
                         @error('price')
