@@ -35,6 +35,7 @@ Route::patch('/rifiuta/ad/{ad}', [RevisorController::class, 'rejectAd'])->middle
 
 // ROTTE PER DIVENTARE REVISORE
 // richiesta diventare revisore (solo a un utente loggato)
+
 Route::get('/richiesta/revisore', [RevisorController::class, 'becomeRevisor'])->middleware('auth')->name('become.revisor');
 // rendere utente revisore
 Route::get('/rendi/revisore/{user}', [RevisorController::class, 'makeRevisor'])->name('make.revisor');

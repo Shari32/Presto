@@ -11,6 +11,12 @@
                 </div>
             @endif
 
+            @if(session()->has('message'))
+                <div class="alert alert-success">
+                    {{ session()->get('message') }}
+                </div>
+            @endif
+
             @forelse($ads as $ad)
                 <div class="col-12 col-md-3">
                     <div class="card">
