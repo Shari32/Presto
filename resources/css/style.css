@@ -49,12 +49,23 @@
 /* CARDS */
 
 .card-custom-image{
-
-    width: 70%;
-    height: 30%;
-    
+    position: center; 
+    background-color: var(--yellow1);   
 }
 
+.card-custom-price{
+    color: black;
+    text-align: center;
+    background-color: white;
+    border: 2px solid;
+    border-radius: 10px;
+    border-color: var(--lightblue);
+}
+
+.badge {
+    font-size: large !important;
+    /* z-index: 2 !important; */
+}
 
 /* FOOTER */
 

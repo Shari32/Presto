@@ -18,26 +18,26 @@
             @endif
 
             @forelse($ads as $ad)
-                <div class="col-12 col-md-3">
-                    <div class="card-custom-image">
+                <div class="col-12 col-md-3 mb-3">
+                    <div class="card">
                         {{-- unisce la funzione isset() con l'operatore ternario --}}
-                       
-                        <img src="{{ Storage::url($ad->image) ?? 'https://picsum.photos/200/300' }}" class="card-img-top"
-                            alt="{{ $ad->title }}">
-                            <h5 class="card-custom-title text-center">{{ $ad->title }}</h5>
-                            <div class="card-custom-body">
-                            <p class="card-custom-description card-custom-footer fst-italic text-muted">{{ $ad->description }}</p>
-                            <h6 class="card-custom-price"> Prezzo: {{ $ad->price }}€  </h6>
-                            <p class="card-custom-category"> Categoria: {{ $ad->category->category }}</p>
-                            <p class="card-custom-vendor text-center"> Venditore: {{ $ad->user->name ?? 'sconosciuto' }}</p>
-                            <p class="card-custom-date text-center">Pubblicato il: {{ $ad->created_at->format('d/m/Y') }}</p>
-                            <hr>
-                            <a href="{{ route('ad.show', compact('ad')) }}" class="btn btn-info mt-3 d-flex justify-content-center">Dettaglio</a>
+                        <div class="card-custom-image">
+                            <img src="{{ Storage::url($ad->image) ?? 'https://picsum.photos/200/300' }}" class="card-img-top" alt="{{ $ad->title }}">
+                            <span class="d-flex justify-content-center">
+                                <p class="badge card-custom-price text-wrap"> {{ $ad->price }}€ </p>
+                            </span>
+                        </div>
+                        <hr class="mt-0">
+                        <h5 class="text-center">{{ $ad->title }}</h5>
+                        <div>
+                            <p class="fst-italic dark-blue-text text-center">{{ $ad->description }}</p>
+                            <p class="text-center"> Categoria: {{ $ad->category->category }}</p>
+                            <a href="{{ route('ad.show', compact('ad')) }}" class="btn btn-info mt-3 mb-2 mx-2 d-flex justify-content-center">Dettaglio</a>
                         </div>
                     </div>
                 </div>
             @empty
-                <h2>Non ci sono ancora articoli</h2>
+                <h2>Non ci sono ancora articoli.</h2>
             @endforelse
 
         </div>
