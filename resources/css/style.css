@@ -78,11 +78,20 @@
 
 }
 
+
 .dropdown-item {
 
     color: #FFC300 !important;
 
 }
+
+.dropdown-item:hover {
+    
+    color: #001D3D !important;
+    background-color: #FFC300 !important;
+    
+}
+
 
 .dropdown-item:hover, .dropdown-item:focus {
   background-color: var(--medblue);
