@@ -11,7 +11,9 @@ class PublicController extends Controller
     public function homepage()
     {
 
-        $ads = Ad::orderBy('created_at', 'DESC')->paginate(6);
+        // $ads = Ad::orderBy('created_at', 'DESC')->where('is_accepted', true)->paginate(6);
+        $ads=Ad::where('is_accepted', true)->orderBy('created_at', 'DESC')->paginate(10);
+       
 
         return view('welcome', compact('ads'));
     }

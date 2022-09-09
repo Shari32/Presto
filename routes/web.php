@@ -39,6 +39,6 @@ Route::patch('/rifiuta/ad/{ad}', [RevisorController::class, 'rejectAd'])->middle
 Route::get('/richiesta/revisore', [RevisorController::class, 'becomeRevisor'])->middleware('auth')->name('become.revisor');
 // rendere utente revisore
 Route::get('/rendi/revisore/{user}', [RevisorController::class, 'makeRevisor'])->name('make.revisor');
-
+//Rotta di ricerca
 Route::get('/ricerca/annuncio', [PublicController::class, 'searchAds'])->name('ads.search');
 

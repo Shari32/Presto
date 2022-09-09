@@ -13,7 +13,7 @@ class Ad extends Model
 
     protected $fillable =
 
-    [
+    [    
         'title',
         'description',
         'image',
@@ -25,14 +25,25 @@ class Ad extends Model
     public function toSearchableArray()
     {
         $category = $this->category;
+        $array = [
+            'id'=> $this->id,
+            'title' => $this->title,
+            'category_id'=> $category,
+            'user_id' => $this->user_id,
+            'price' => $this->price,
+            'description'=>$this->description
+        ];
+
         // $array = [
+        //     'id'=> $this->id,
         //     'title' => $this->title,
         //     'category_id' => $category,
         //     'user_id' => $this->user_id,
         //     'price' => $this->price
         // ];
 
-        // return $array;
+
+        return $array;
     }
 
     public function category()
