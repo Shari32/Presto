@@ -34,14 +34,6 @@ class Ad extends Model
             'description'=>$this->description
         ];
 
-        // $array = [
-        //     'id'=> $this->id,
-        //     'title' => $this->title,
-        //     'category_id' => $category,
-        //     'user_id' => $this->user_id,
-        //     'price' => $this->price
-        // ];
-
 
         return $array;
     }

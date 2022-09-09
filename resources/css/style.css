@@ -10,18 +10,38 @@
 
 /* NAVBAR */
 
+.navbar{
+
+    color: var(--lightyellow);
+    background-color: var(--medblue);
+    transition: 0.25s;
+
+}
+
+.nav-link{
+
+    color: var(--lightyellow) !important;
+
+}
+
 .margine{
 
     margin-left: 10px;
 
 }
 
+.bg-pallino{
+
+    background-color: var(--lightyellow);
+
+}
+
 .btn-custom{
 
-    width: 50px;
-    height: 50px;
+    width: 45px;
+    height: 45px;
     border-radius: 50%;
-    background-color: var( --darkblue);
+    background-color: var(--darkblue);
     border: 3px solid var(--medblue);
     color: var(--lightyellow);
     transition: 0.5s;
