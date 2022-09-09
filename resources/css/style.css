@@ -6,3 +6,44 @@
     --lightyellow:#FFD60A;
 
 }
+
+
+.margine{
+
+    margin-left: 10px;
+
+}
+
+.btn-custom{
+
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: var( --darkblue);
+    border: 3px solid var(--medblue);
+    color: var(--lightyellow);
+    transition: 0.5s;
+
+}
+
+.btn-custom:hover{
+
+    transition: 0.5s;
+    color: var(--black);
+    background-color: var(--lightyellow);
+    border: 3px solid var( --darkblue);
+
+}
+
+#padre{
+
+    width: 0%;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in;
+    transition-property: all;
+
+}
+
+h1{
+    color: var(--lightblue);
+}
