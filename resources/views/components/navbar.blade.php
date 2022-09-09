@@ -13,7 +13,7 @@
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         Categorie
                     </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <ul class="dropdown-menu bg-dropDown" aria-labelledby="navbarDropdown">
                         @foreach($categories as $category)
                         <li><a class="dropdown-item" href="{{route('categoryShow', compact('category'))}}">{{$category->category}}</a></li>
                         <hr>
@@ -26,7 +26,7 @@
                 <a class="nav-link dropdown-toggle me-5" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     <i class="fa-solid fa-user"></i>
                 </a>
-                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                <ul class="dropdown-menu dropdown-menu-end bg-dropDown" aria-labelledby="navbarDropdown">
                     <li><a class="dropdown-item" href="{{route('register')}}">Register</a></li>
                     <li><a class="dropdown-item" href="{{route('login')}}">Login</a></li>
                 </ul>
@@ -36,7 +36,7 @@
                 <a class="nav-link dropdown-toggle me-5" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     <i class="fa-solid fa-user"></i>
                 </a>
-                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                <ul class="dropdown-menu dropdown-menu-end bg-dropDown" aria-labelledby="navbarDropdown">
                     <li><a class="dropdown-item" href="{{route('ad.create')}}">Inserisci annuncio</a></li>
                     <li><a class="dropdown-item" href="#"
                         onclick="event.preventDefault(); document.querySelector('#form-logout').submit();">Esci</a>
@@ -62,7 +62,7 @@
             @endguest
             <form id="padre" class="d-flex" role="search" action="{{route('ads.search')}}" method="GET">
                 
-                <input id="formCustom" class="form-control margine me-2" name="searched" type="search" placeholder="Search" aria-label="Search">
+                <input id="formCustom" class="form-control margine me-2 bg-searchBar" name="searched" type="search" placeholder="Search" aria-label="Search">
                 
             </form>
             
