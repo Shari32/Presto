@@ -1,65 +1,107 @@
 <!-- Footer -->
-<footer class="bg-light text-center ">
-    <!-- Grid container -->
-    <div class="container p-4">
+	<footer class="text-center text-lg-start text-white footer-color">
   
-      <!-- Section: Social media -->
-      <section class="mb-4">
-        <!-- Facebook -->
-        <a class="btn btn-primary btn-floating m-1" style="background-color: #3b5998" href="#!" role="button"><i class="fab fa-facebook-f"></i></a>
-  
-        <!-- Twitter -->
-        <a class="btn btn-primary btn-floating m-1" style="background-color: #55acee" href="#!" role="button"><i class="fab fa-twitter"></i></a>
-  
-        <!-- Google -->
-        <a class="btn btn-primary btn-floating m-1" style="background-color: #dd4b39" href="#!" role="button"><i class="fab fa-google"></i></a>
-  
-        <!-- Instagram -->
-        <a class="btn btn-primary btn-floating m-1" style="background-color: #ac2bac" href="#!" role="button"><i class="fab fa-instagram"></i></a>
-  
-        <!-- Linkedin -->
-        <a class="btn btn-primary btn-floating m-1" style="background-color: #0082ca" href="#!" role="button"><i class="fab fa-linkedin-in"></i></a>
-        <!-- Github -->
-        <a class="btn btn-primary btn-floating m-1" style="background-color: #333333" href="#!" role="button"><i class="fab fa-github"></i></a>
-      </section>
-      <!-- Section: Social media -->
-  
-  
-      <!-- Section: VUOI LAVORARE CON NOI ? -->
-      <section class="">
-        
-        <div class='container-fluid mt-4 p-5 bg-dark text-light'>
+		<!-- Sezione SOCIAL MEDIA -->
+		<section class="d-flex justify-content-between p-4 section-footer">
+		  
+			<!-- SINISTRA -->
+			<div class="me-5">
+				<span class="dark-blue-text">Resta in contatto con noi:</span>
+			</div>
 
-          <div class="row">
-            <div class="col-12 text-center">
-              <p>Vuoi lavorare con noi ? Clicca qui!</p>
-              <a href="{{route('become.revisor')}}" class="btn btn-warning text-light shadow my-3">Premimi tutto</a>
-            </div>
-          </div>
+			<!-- DESTRA -->
+			<div>
+			
+				<a href="" class="dark-blue-text me-4">
+					<i class="fa-brands fa-facebook"></i>
+				</a>
+				
+				<a href="" class="dark-blue-text me-4">
+					<i class="fa-brands fa-instagram"></i>
+				</a>
+				
+				<a href="" class="dark-blue-text me-4">
+					<i class="fa-brands fa-twitter"></i>
+				</a>
+				
+				<a href="" class="dark-blue-text me-4">
+					<i class="fa-brands fa-telegram"></i>
+				</a>
+				
+				<a href="" class="dark-blue-text me-4">
+					<i class="fa-brands fa-linkedin"></i>
+				</a>
+				
+			</div>
+			
+		</section>
 
-        </div>
+		<!-- Sezione LINKS  -->
+		<section class="">
+		
+			<div class="container text-center text-md-start mt-5">
+		  
+				<!-- Grid row -->
+				<div class="row mt-3">
+			
+					<!-- Grid column -->
+					<div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+			  
+						<!-- Content -->
+						<h6 class="text-uppercase fw-bold">Team Panda</h6>
+						<hr class="mb-4 mt-0 d-inline-block mx-auto hr-footer">
+						<p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, rerum.</p>
+					</div>
 
-      </section>
-      <!-- Section: Form -->
-  
-  
-      <!-- Section: Text -->
-      <section class="mb-4">
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt
-          distinctio earum repellat quaerat voluptatibus placeat nam,
-          commodi optio pariatur est quia magnam eum harum corrupti dicta,
-          aliquam sequi voluptate quas.
-        </p>
-      </section>
-   
-  
+					<!-- Grid column -->
+					<div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+					
+						<!-- Links -->
+						<h6 class="text-uppercase fw-bold">Categorie:</h6>
+						<hr class="mb-4 mt-0 d-inline-block mx-auto hr-footer">
+						<p><a href="#!" class="text-white">Automobili</a></p>
+						<p><a href="#!" class="text-white">Elettronica</a></p>
+						<p><a href="#!" class="text-white">Immobili</a></p>
+						<p><a href="#!" class="text-white">Film e TV</a></p>
+						
+					</div>
 
-    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
-      © 2022 Team Panda
-  
-    </div>
- 
-  
+					<!-- Grid column -->
+					<div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+					
+						<!-- Links -->
+						<h6 class="text-uppercase fw-bold">Link utili:</h6>
+						<hr class="mb-4 mt-0 d-inline-block mx-auto hr-footer">
+						<p><a href="#!" class="text-white">Account</a></p>
+						<p><a href="#!" class="text-white">Diventa un revisore</a></p>
+						<p><a href="#!" class="text-white">Non so cosa scrivere</a></p>
+						<p><a href="#!" class="text-white">Help</a></p>
+					
+					</div>
+
+
+					<!-- Grid column -->
+					<div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+					
+						<!-- Links -->
+						<h6 class="text-uppercase fw-bold">Contatti:</h6>
+						<hr class="mb-4 mt-0 d-inline-block mx-auto hr-footer">
+						<p><i class="fas fa-home mr-3"></i> Aulab, Strada S. Giorgio Martire 2D, 70124 Bari</p>
+						<p><i class="fas fa-envelope mr-3"></i> Presto.it </p>
+						<p><i class="fas fa-phone mr-3"></i> Inserire Numero </p>
+						<p><i class="fas fa-print mr-3"></i> Inserire Fax</p>
+					
+					</div>
+
+				</div>
+			
+			</div>
+		  
+		</section>
+
+		<!-- Copyright -->
+		<div class="text-center p-3 end-footer">
+			© Presto.it | Team Panda | 2022
+		</div>
+
   </footer>
-  <!-- Footer -->
