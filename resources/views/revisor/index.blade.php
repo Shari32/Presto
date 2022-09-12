@@ -1,12 +1,13 @@
 <x-layout>
 
-<div class="container-fluid p-5 bg-gradient bg-success p-5 shadow mb-4">
+<div class="container-fluid p-5 bg-gradient bg-revisor p-5 shadow">
 
     <div class="row">
         <div class="col-12 text-light text-center mb-4">
             <h1 class="display-2 revisor-title">
                 {{$ad_to_check ? 'Annuncio da revisionare:' : 'Non ci sono annunci da revisionare.'}}
             </h1>
+            <div class="space"></div>
         </div>
     </div>
 
@@ -68,9 +69,9 @@
 
         </div>
 
-        <div class="row">
+        <div class="row mx-auto">
 
-            <div class="col-12 col-md-6">
+            <div class="col-6 col-md-6 mb-3">
                 <form action="{{route('revisor.accept_ad',['ad'=>$ad_to_check])}}" method="POST">
                     @csrf
                     @method('PATCH')
@@ -78,7 +79,7 @@
                 </form>
             </div>
 
-            <div class="col-12 col-md-6">
+            <div class="col-6 col-md-6 mb-3">
                 <form action="{{route('revisor.reject_ad',['ad'=>$ad_to_check])}}" method="POST">
                     @csrf
                     @method('PATCH')

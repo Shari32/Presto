@@ -9,6 +9,10 @@
 
 /* GENERICS */
 
+.space{
+    height: 300px;
+}
+
 body {
     background-color: #FCF6E8
 }
