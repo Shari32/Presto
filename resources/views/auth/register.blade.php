@@ -3,21 +3,21 @@
 
     <div class="container  my-5">
         <div class="row justify-content-center">
-            <div class="col-12 col-md-10">
+            <div class="col-12 col-md-10 box">
                 
                 <form method="POST" action="{{route('register')}}">
                     <x-validation-errors />
                     @csrf
-                    <div class="mb-3">
+                    <div class="my-3">
                         
-                        <label for="name" class="form-label">Name</label>
+                        <label for="name" class="form-label">Username</label>
                         <input type="text" name="name" class="form-control" id="name" aria-describedby="nameHelp">
                         
                     </div>
                     
                     <div class="mb-3">
                         
-                        <label for="email" class="form-label">Email address</label>
+                        <label for="email" class="form-label">Indirizzo Email</label>
                         <input type="email" name="email" class="form-control" id="email" aria-describedby="emailHelp">
                         
                     </div>
@@ -36,7 +36,7 @@
                         
                     </div>
                     
-                    <button type="submit" class="btn btn-warning">Registrati</button>
+                    <button type="submit" class="btn bg-btn mb-3">Registrati</button>
                 </form>
             </div>
         </div>

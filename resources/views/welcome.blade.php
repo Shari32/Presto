@@ -18,8 +18,8 @@
             @endif
 
             @forelse($ads as $ad)
-                <div class="col-12 col-md-3 mb-3">
-                    <div class="card">
+                <div class="col-12 col-md-3 mb-3 mx-5 px-5">
+                    <div class="card px-3 py-3">
                         {{-- unisce la funzione isset() con l'operatore ternario --}}
                         <div class="card-custom-image">
                             <img src="{{ Storage::url($ad->image) ?? 'https://picsum.photos/200/300' }}" class="card-img-top" alt="{{ $ad->title }}">

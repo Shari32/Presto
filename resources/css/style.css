@@ -1,16 +1,47 @@
 /* VARIABILI COLORE */
-:root{
-    --darkblue:#000814;
-    --medblue:#001D3D;
-    --lightblue:#003566;
-    --yellow1:#FFC300;
-    --lightyellow:#FFD60A;
+:root {
+    --darkblue: #000814;
+    --medblue: #001D3D;
+    --lightblue: #003566;
+    --yellow1: #FFC300;
+    --lightyellow: #FFD60A;
+}
 
+/* GENERICS */
+
+body {
+    background-color: #FCF6E8
+}
+
+h1 {
+    color: var(--lightblue);
+    text-shadow: 2px 2px 2px var(--yellow1)
+}
+
+.revisor-title {
+    color: white;
+    text-shadow: 5px 5px 5px var(--yellow1);
+}
+
+.bg-btn {
+    background-color: var(--lightyellow);
+}
+
+.box {
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    background-color: var(--medblue);
+    color: var(--yellow1);
+    border-radius: 20px;
+}
+
+
+.bg-revisor {
+    background-color: var(--medblue);
 }
 
 /* NAVBAR */
 
-.navbar{
+.navbar {
 
     color: var(--lightyellow);
     background-color: var(--medblue);
@@ -18,25 +49,25 @@
 
 }
 
-.nav-link{
+.nav-link {
 
     color: var(--lightyellow) !important;
 
 }
 
-.margine{
+.margine {
 
     margin-left: 10px;
 
 }
 
-.bg-pallino{
+.bg-pallino {
 
     background-color: var(--lightyellow);
 
 }
 
-.btn-custom{
+.btn-custom {
 
     width: 50px;
     height: 50px;
@@ -48,16 +79,16 @@
 
 }
 
-.btn-custom:hover{
+.btn-custom:hover {
 
     transition: 0.5s;
     color: var(--black);
     background-color: var(--lightyellow);
-    border: 3px solid var( --darkblue);
+    border: 3px solid var(--darkblue);
 
 }
 
-#padre{
+#padre {
 
     width: 0%;
     transition-duration: 0.5s;
@@ -86,25 +117,31 @@
 }
 
 .dropdown-item:hover {
-    
+
     color: #001D3D !important;
     background-color: #FFC300 !important;
-    
+
 }
 
 
-.dropdown-item:hover, .dropdown-item:focus {
-  background-color: var(--medblue);
+.dropdown-item:hover,
+.dropdown-item:focus {
+    background-color: var(--medblue);
 }
 
 /* CARDS */
 
-.card-custom-image{
-    position: center; 
-    background-color: var(--yellow1);   
+/* .card {
+    height: 500px !important;
+    width: 500px !important;
+} */
+
+.card-custom-image {
+    position: center;
+    background-color: var(--yellow1);
 }
 
-.card-custom-price{
+.card-custom-price {
     color: black;
     text-align: center;
     background-color: white;
@@ -120,39 +157,38 @@
 
 /* FOOTER */
 
-.dark-blue-text{
+.dark-blue-text {
 
     color: var(--darkblue);
 
 }
 
-.footer-color{
+.footer-color {
 
     background-color: var(--medblue);
 
 }
 
-.section-footer{
+.section-footer {
 
     background-color: var(--lightyellow);
 
 }
 
-.end-footer{
+.end-footer {
 
     background-color: var(--darkblue);
 
 }
 
-.hr-footer{
+.hr-footer {
 
-    width: 60px; 
-    background-color: var(--lightyellow); 
+    width: 60px;
+    background-color: var(--lightyellow);
     height: 2px
-
 }
 
-a{
+a {
 
     text-decoration: none;
 

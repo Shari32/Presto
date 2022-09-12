@@ -32,6 +32,19 @@
                 </ul>
             </li>
             @else
+            @if (Auth::user()->is_revisor)
+            <li class="nav-item nav-link me-5">
+                <a class="nav-link btn btn-sm position-relative" aria-current="page"
+                    href="{{ route('revisor.index') }}">
+                    Zona Revisore
+                    <span
+                        class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-pallino">
+                        {{ App\Models\Ad::toBeRevisionedCount() }}
+                        <span class="visually-hidden">unread messages</span>
+                    </span>
+                </a>
+            </li>
+            @endif
             <li class="nav-item dropdown nav-link">
                 <a class="nav-link dropdown-toggle me-5" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     <span><i class="fa-solid fa-user"></i> {{Auth::user()->name}}</span>
@@ -46,19 +59,6 @@
                     </form>
                 </ul>
             </li>
-            @if (Auth::user()->is_revisor)
-            <li class="nav-item nav-link me-5">
-                <a class="nav-link btn btn-sm position-relative" aria-current="page"
-                    href="{{ route('revisor.index') }}">
-                    Zona Revisore
-                    <span
-                        class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-pallino">
-                        {{ App\Models\Ad::toBeRevisionedCount() }}
-                        <span class="visually-hidden">unread messages</span>
-                    </span>
-                </a>
-            </li>
-            @endif
             @endguest
             <form id="padre" class="d-flex" role="search" action="{{route('ads.search')}}" method="GET">
                 

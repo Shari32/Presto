@@ -3,8 +3,8 @@
     <form wire:submit.prevent="store">
 
         <div class="container">
-            <div class="row">
-                <div class="col-12 col-md-8">
+            <div class="row justify-content-center">
+                <div class="col-12 col-md-8 box mb-5">
 
 
 
@@ -12,7 +12,7 @@
                     @csrf
 
 
-                    <div class="mb-3">
+                    <div class="mb-3 mt-3">
 
                         <label for="title" class="form-label">Titolo Annuncio</label>
                         <input type="text" name="title" wire:model="title"
@@ -49,8 +49,8 @@
                     <div class="mb-3">
 
                         <label for="price" class="form-label">Prezzo</label>
-                        <input type="number" name="price" wire:model="price" min="0.00" max="100000.00" step="0.01"
-                            class="form-control @error('author') is-invalid @enderror" id="price"
+                        <input type="number" name="price" wire:model="price" min="0.00" max="100000.00"
+                            step="0.01" class="form-control @error('author') is-invalid @enderror" id="price"
                             aria-describedby="priceHelp">
                         @error('price')
                             <span class="fst-italic small text-danger">{{ $message }}</span>
@@ -77,7 +77,7 @@
 
 
 
-                    <button type="submit" class="btn btn-warning">Inserisci annuncio</button>
+                    <button type="submit" class="btn bg-btn my-3">Inserisci annuncio</button>
     </form>
 </div>
 
