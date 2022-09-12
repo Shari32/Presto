@@ -22,7 +22,8 @@
                     <div class="card">
                         {{-- unisce la funzione isset() con l'operatore ternario --}}
                         <div class="card-custom-image">
-                            <img src="{{ Storage::url($ad->image) ?? 'https://picsum.photos/200/300' }}" class="card-img-top" alt="{{ $ad->title }}">
+                        <img src="{{!$ad->images()->get()->isEmpty() ? Storage::url($ad->images()->first()->path) :'https://picsum.photos/200'}}" class="card-img-top"
+                            alt="{{ $ad->title }}">
                             <span class="d-flex justify-content-center">
                                 <p class="badge card-custom-price text-wrap"> {{ $ad->price }}€ </p>
                             </span>
