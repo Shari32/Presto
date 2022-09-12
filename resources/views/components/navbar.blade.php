@@ -34,7 +34,7 @@
             @else
             <li class="nav-item dropdown nav-link">
                 <a class="nav-link dropdown-toggle me-5" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    <i class="fa-solid fa-user"></i>
+                    <span><i class="fa-solid fa-user"></i> {{Auth::user()->name}}</span>
                 </a>
                 <ul class="dropdown-menu dropdown-menu-end bg-dropDown" aria-labelledby="navbarDropdown">
                     <li><a class="dropdown-item" href="{{route('ad.create')}}">Inserisci annuncio</a></li>
