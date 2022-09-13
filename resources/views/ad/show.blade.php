@@ -11,7 +11,7 @@
 
         <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
 
-          @if ((!$ad->images) == 'null')
+          @if ($ad->images->count() >0)
           <div class="carousel-inner">
             @foreach($ad->images as $image)
             <div class="carousel-item @if($loop->first)active @endif">

@@ -1,7 +1,7 @@
 <x-layout>
 
-    <x-header>Presto.it</x-header>
-    <p> {{ __('ui.allAds') }}</p>
+    {{-- <x-header>Presto.it</x-header> --}}
+    <x-header>Le ultime inserzioni</x-header>
     <div class="container my-5">
         <div class="row justify-content-center">
 
@@ -17,15 +17,19 @@
                 </div>
             @endif
 
+
+
+            <div class="boxColor"></div>
+
             @forelse($ads as $ad)
-                <div class="col-12 col-md-3 mb-3 mx-5 px-5">
-                    <div class="card px-3 py-3">
+                <div class="col-12 col-md-3 mb-3 mx-5 px-5 d-flex justify-content-center">
+                    <div class="card px-3 py-3 my-3 shadow-lg">
                         {{-- unisce la funzione isset() con l'operatore ternario --}}
                         <div class="card-custom-image">
                         <img src="{{!$ad->images()->get()->isEmpty() ? $ad->images()->first()->getUrl(400,300) :'https://picsum.photos/200'}}" class="card-img-top"
                             alt="{{ $ad->title }}">
                             <span class="d-flex justify-content-center">
-                                <p class="badge card-custom-price text-wrap"> {{ $ad->price }}€ </p>
+                                <p class="badge card-custom-price text-wrap mt-3"> {{ $ad->price }}€ </p>
                             </span>
                         </div>
                         <hr class="mt-0">
@@ -33,7 +37,7 @@
                         <div>
                             <p class="fst-italic dark-blue-text text-center">{{ $ad->description }}</p>
                             <p class="text-center"> Categoria: {{ $ad->category->category }}</p>
-                            <a href="{{ route('ad.show', compact('ad')) }}" class="btn btn-info mt-3 mb-2 mx-2 d-flex justify-content-center">Dettaglio</a>
+                            <a href="{{ route('ad.show', compact('ad')) }}" class="btn btn-revisore mt-3 mb-2 mx-2 d-flex justify-content-center">Dettaglio</a>
                         </div>
                     </div>
                 </div>
