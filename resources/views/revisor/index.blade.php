@@ -25,8 +25,8 @@
                         <div class="carousel-inner">
                             @foreach($ad_to_check->images as $image)
                             <div class="carousel-item @if($loop->first)active @endif">
-                            <img src="{{ Storage::url($ad->path) ?? 'https://picsum.photos/200/300' }}" class="card-img-top"
-                            alt="{{ $ad->title }}">
+                            <img src="{{Storage::url($image->path) ?? 'https://picsum.photos/200/300'}}" class="card-img-top"
+                            alt="">
                             </div>
                             @endforeach
                         </div>
@@ -104,3 +104,4 @@
 
 
 </x-layout>
+
