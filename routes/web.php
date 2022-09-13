@@ -44,4 +44,4 @@ Route::get('/ricerca/annuncio', [PublicController::class, 'searchAds'])->name('a
 
 // ROTTE ICONE-LINGUE
 
-// Route::post('/lingua/{lang}', [PublicController::class, 'setLanguage'])->name('set_language_locale');
+ Route::post('/lingua/{lang}', [PublicController::class, 'setLanguage'])->name('set_language_locale');

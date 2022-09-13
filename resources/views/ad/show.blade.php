@@ -11,27 +11,27 @@
 
         <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
 
-          @if ($ad->images)
+          @if ((!$ad->images) == 'null')
           <div class="carousel-inner">
             @foreach($ad->images as $image)
             <div class="carousel-item @if($loop->first)active @endif">
               <img src="{{Storage::url($image->path)}}" class="d-block w-100" alt="...">
             </div>
            
+            @endforeach
           </div>
-           @endforeach
 
           @else
 
             <div class="carousel-inner">
               <div class="carousel-item active">
-                <img src="" class="d-block w-100" alt="...">
+                <img src="https://picsum.photos/200/300" class="d-block w-100" alt="...">
               </div>
               <div class="carousel-item ">
-                <img src="" class="d-block w-100" alt="...">
+                <img src="https://picsum.photos/200/300" class="d-block w-100" alt="...">
               </div>
               <div class="carousel-item">
-                <img src="" class="d-block w-100" alt="...">
+                <img src="https://picsum.photos/200/300" class="d-block w-100" alt="...">
               </div>
             </div>
           

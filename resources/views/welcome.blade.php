@@ -1,7 +1,7 @@
 <x-layout>
 
     <x-header>Presto.it</x-header>
-
+    <p> {{ __('ui.allAds') }}</p>
     <div class="container my-5">
         <div class="row justify-content-center">
 
@@ -22,7 +22,7 @@
                     <div class="card px-3 py-3">
                         {{-- unisce la funzione isset() con l'operatore ternario --}}
                         <div class="card-custom-image">
-                        <img src="{{!$ad->images()->get()->isEmpty() ? Storage::url($ad->images()->first()->path) :'https://picsum.photos/200'}}" class="card-img-top"
+                        <img src="{{!$ad->images()->get()->isEmpty() ? $ad->images()->first()->getUrl(400,300) :'https://picsum.photos/200'}}" class="card-img-top"
                             alt="{{ $ad->title }}">
                             <span class="d-flex justify-content-center">
                                 <p class="badge card-custom-price text-wrap"> {{ $ad->price }}€ </p>
