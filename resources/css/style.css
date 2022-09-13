@@ -86,7 +86,7 @@ h1 {
 .btn-custom:hover {
 
     transition: 0.5s;
-    color: var(--black);
+    color: var(--darkblue);
     background-color: var(--lightyellow);
     border: 3px solid var(--darkblue);
 
@@ -195,7 +195,32 @@ h1 {
 a {
 
     text-decoration: none;
+    color: black;
 
+}
+
+a:hover {
+
+    text-decoration: none;
+    color: var(--yellow1);
+
+}
+
+.btn-revisore {
+    background-color: var(--yellow1);
+    border: 3px solid var(--medblue);
+    color: var(--darkblue);
+    transition: 0.5s;
+    text-decoration: none;
+}
+
+.btn-revisore:hover {
+
+    transition: 0.5s;
+    color: var(--yellow1);
+    background-color: var(--medblue);
+    border: 3px solid var(--darkblue);
+    text-decoration: none;
 }
 
 /* form ad.create livewire */

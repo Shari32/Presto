@@ -6,12 +6,13 @@
 		  
 			<!-- SINISTRA -->
 			<div class="me-5">
-				<span class="dark-blue-text">Resta in contatto con noi:</span>
+				<p class="text-dark fs-5 fw-bold d-flex align-items-center mb-0">Vuoi diventare un revisore di annunci ?<button class="btn btn-revisore ms-2">Premimi<a href="{{route('become_revisor')}}"></a></button></p>
 			</div>
 
 			<!-- DESTRA -->
-			<div>
+			<div class="d-flex align-items-center">
 			
+				<span class="dark-blue-text me-4 fs-5 fw-bold mb-0">Resta in contatto con noi:</span>
 				<a href="" class="dark-blue-text me-4">
 					<i class="fa-brands fa-facebook"></i>
 				</a>
@@ -50,7 +51,7 @@
 						<!-- Content -->
 						<h6 class="text-uppercase fw-bold">Team Panda</h6>
 						<hr class="mb-4 mt-0 d-inline-block mx-auto hr-footer">
-						<p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, rerum.</p>
+						<p> Presto.it, per vendere le tue cianfrusaglie al piu' presto.</p>
 					</div>
 
 					<!-- Grid column -->
@@ -62,7 +63,7 @@
 						<p><a href="#!" class="text-white">Automobili</a></p>
 						<p><a href="#!" class="text-white">Elettronica</a></p>
 						<p><a href="#!" class="text-white">Immobili</a></p>
-						<p><a href="#!" class="text-white">Film e TV</a></p>
+						{{-- <p><a href="#!" class="text-white">Film e TV</a></p> --}}
 						
 					</div>
 
@@ -74,8 +75,8 @@
 						<hr class="mb-4 mt-0 d-inline-block mx-auto hr-footer">
 						<p><a href="#!" class="text-white">Account</a></p>
 						<p><a href="{{route('become_revisor')}}" class="text-white">Diventa un revisore</a></p>
-						<p><a href="#!" class="text-white">Non so cosa scrivere</a></p>
-						<p><a href="#!" class="text-white">Help</a></p>
+						<p><a href="#!" class="text-white">Categorie</a></p>
+						{{-- <p><a href="#!" class="text-white">Contatti</a></p> --}}
 					
 					</div>
 
@@ -86,10 +87,10 @@
 						<!-- Links -->
 						<h6 class="text-uppercase fw-bold">Contatti:</h6>
 						<hr class="mb-4 mt-0 d-inline-block mx-auto hr-footer">
-						<p><i class="fas fa-home mr-3"></i> Aulab, Strada S. Giorgio Martire 2D, 70124 Bari</p>
+						<p><i class="fas fa-home mr-3"></i> Aulab, Strada S. Giorgio M. 2D, Bari</p>
 						<p><i class="fas fa-envelope mr-3"></i> Presto.it </p>
 						<p><i class="fas fa-phone mr-3"></i> Inserire Numero </p>
-						<p><i class="fas fa-print mr-3"></i> Inserire Fax</p>
+						{{-- <p><i class="fas fa-print mr-3"></i> Inserire Fax</p> --}}
 					
 					</div>
 
