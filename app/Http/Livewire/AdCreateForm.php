@@ -75,16 +75,7 @@ class AdCreateForm extends Component
 
         $this->validate();
 
-        $category = Category::find($this->category);
-        
-        $ad = $category->ads()->create([
-            
-            'title' => $this->title,
-            'description' => $this->description,
-            'price' => $this->price,
-            'user_id' => Auth::user()->id
-            
-        ]);
+        $this->ad = Category::find($this->category)->ads()->create($this->validate());
         
         if(count($this->images)){
 
@@ -92,7 +83,7 @@ class AdCreateForm extends Component
 
                 // $ad->images()->create(['path'=> $image->store('images','public')]);
                 $newFileName = "ads/{$this->ad->id}";
-                $newImage = $this->ad->images()->create(['path'=> $image->store($newFileName,'public')]);
+                $newImage = $this->ad->images()->create(['path'=>$image->store($newFileName,'public')]);
 
                 dispatch(new ResizeImage($newImage->path, 400, 300));
 
@@ -101,8 +92,6 @@ class AdCreateForm extends Component
             File::deleteDirectory(storage_path('/app/livewire-tmp'));
 
         }
-
-        Auth::user()->ads()->save($ad);
 
         $this->reset();
         session()->flash('message', 'Hai correttamente inserito il tuo annuncio, sarà pubblicato dopo la revisione.');

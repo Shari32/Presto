@@ -52,6 +52,11 @@
 						<h6 class="text-uppercase fw-bold">Team Panda</h6>
 						<hr class="mb-4 mt-0 d-inline-block mx-auto hr-footer">
 						<p> Presto.it, per vendere le tue cianfrusaglie al piu' presto.</p>
+						{{-- <span>Lingua: 
+							<x-_locale lang='it' nation='it'/> 
+							<x-_locale lang='en' nation='gb'/>
+							<x-_locale lang='es' nation='es'/>
+						</span> --}}
 					</div>
 
 					<!-- Grid column -->
