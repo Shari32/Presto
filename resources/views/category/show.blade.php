@@ -10,7 +10,7 @@
                     <div class="card">
                         {{-- unisce la funzione isset() con l'operatore ternario --}}
                         
-                        <img src="{{ Storage::url($ad->image) ?? 'https://picsum.photos/200/300' }}" class="card-img-top"
+                        <img src="{{!$ad->images()->get()->isEmpty() ? Storage::url($ad->images()->first()->path) :'https://picsum.photos/200'}}" class="card-img-top"
                             alt="{{ $ad->title }}">
                         <h5 class="card-title">{{ $ad->title }}</h5>
                         <div class="card-body">
