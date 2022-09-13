@@ -42,3 +42,6 @@ Route::get('/rendi/revisore/{user}', [RevisorController::class, 'makeRevisor'])-
 //Rotta di ricerca
 Route::get('/ricerca/annuncio', [PublicController::class, 'searchAds'])->name('ads.search');
 
+// ROTTE ICONE-LINGUE
+
+// Route::post('/lingua/{lang}', [PublicController::class, 'setLanguage'])->name('set_language_locale');

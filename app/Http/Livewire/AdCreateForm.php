@@ -5,8 +5,10 @@ namespace App\Http\Livewire;
 use App\Models\Ad;
 use Livewire\Component;
 use App\Models\Category;
+use App\Jobs\ResizeImage;
 use Livewire\WithFileUploads;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\File;
 
 class AdCreateForm extends Component
 {
@@ -54,41 +56,45 @@ class AdCreateForm extends Component
     }
 
     public function removeImage($key){
+
         if(in_array($key, array_keys($this->images))){
+
             unset($this->images[$key]);
+
         }
+
     }
 
-    public function updated($propertyName)
-    {
+    public function updated($propertyName){
+
         $this->validateOnly($propertyName);
+
     }
 
-    public function store()
-    {
+    public function store(){
 
         $this->validate();
 
-        $category = Category::find($this->category);
-        
-        $ad = $category->ads()->create([
-            
-            'title' => $this->title,
-            'description' => $this->description,
-            'price' => $this->price,
-            'user_id' => Auth::user()->id
-            
-        ]);
+        $this->ad = Category::find($this->category)->ads()->create($this->validate());
         
         if(count($this->images)){
+
             foreach($this->images as $image){
-                $ad->images()->create(['path'=> $image->store('images','public')]);
+
+                // $ad->images()->create(['path'=> $image->store('images','public')]);
+                $newFileName = "ads/{$this->ad->id}";
+                $newImage = $this->ad->images()->create(['path'=>$image->store($newFileName,'public')]);
+
+                dispatch(new ResizeImage($newImage->path, 400, 300));
+
             }
+
+            File::deleteDirectory(storage_path('/app/livewire-tmp'));
+
         }
-        Auth::user()->ads()->save($ad);
 
         $this->reset();
-        session()->flash('message', 'Hai correttemente inserito il tuo annuncio, sarà pubblicato dopo la revisione ');
+        session()->flash('message', 'Hai correttamente inserito il tuo annuncio, sarà pubblicato dopo la revisione.');
     }
 
     public function cleanForm()
