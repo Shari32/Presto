@@ -6,12 +6,13 @@
 		  
 			<!-- SINISTRA -->
 			<div class="me-5">
-				<span class="dark-blue-text">Resta in contatto con noi:</span>
+				<p class="text-dark fs-5 fw-bold d-flex align-items-center mb-0">Vuoi diventare un revisore di annunci ?<button class="btn btn-revisore ms-2">Premimi<a href="{{route('become_revisor')}}"></a></button></p>
 			</div>
 
 			<!-- DESTRA -->
-			<div>
+			<div class="d-flex align-items-center">
 			
+				<span class="dark-blue-text me-4 fs-5 fw-bold mb-0">Resta in contatto con noi:</span>
 				<a href="" class="dark-blue-text me-4">
 					<i class="fa-brands fa-facebook"></i>
 				</a>
@@ -50,7 +51,7 @@
 						<!-- Content -->
 						<h6 class="text-uppercase fw-bold">Team Panda</h6>
 						<hr class="mb-4 mt-0 d-inline-block mx-auto hr-footer">
-						<p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, rerum.</p>
+						<p> Presto.it, per vendere le tue cianfrusaglie presto.</p>
 					</div>
 
 					<!-- Grid column -->
