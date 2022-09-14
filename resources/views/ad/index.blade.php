@@ -1,5 +1,5 @@
 <x-layout>
-    <x-header> Tutti gli annunci </x-header>
+    <x-header>{{__('ui.allAds')}} </x-header>
 
     <div class="container my-5">
         <div class="row justify-content-center">

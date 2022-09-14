@@ -1,5 +1,5 @@
 <x-layout>
-    <x-header>Accedi</x-header>
+    <x-header>{{__('ui.login')}}</x-header>
 
     <div class="container my-5">
         <div class="row justify-content-center">
@@ -26,8 +26,8 @@
 
                         </div>
 
-                        <button type="submit" class="btn bg-btn mb-3">Accedi</button>
-                        <a href="{{ route('register') }}" class="btn bg-btn mb-3">Registrati</a>
+                        <button type="submit" class="btn bg-btn mb-3">{{__('ui.login')}}</button>
+                        <a href="{{ route('register') }}" class="btn bg-btn mb-3">{{__('ui.register')}}</a>
                     </form>
 
             </div>

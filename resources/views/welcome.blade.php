@@ -1,7 +1,7 @@
 <x-layout>
 
-    <x-header>Presto.it</x-header>
-    <p> {{ __('ui.allAds') }}</p>
+    <x-header>{{ __('ui.welcome') }}</x-header>
+    <p> </p>
     <div class="container my-5">
         <div class="row justify-content-center">
 

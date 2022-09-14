@@ -1,6 +1,6 @@
 <x-layout>
 
-    <x-header>Esplora la categoria {{$category->category}}</x-header>
+    <x-header>{{__('ui.expCategory')}}: {{$category->category}}</x-header>
 
     <div class="container my-5">
         <div class="row justify-content-center">
@@ -28,7 +28,7 @@
                     </div>
                 </div>
             @empty
-                <h2>Non ci sono ancora articoli</h2>
+                <h2>{{__('ui.noAds')}}</h2>
                 
             @endforelse
 

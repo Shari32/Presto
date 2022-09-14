@@ -1,5 +1,6 @@
 <x-layout>
-    <x-header>Registrati</x-header>
+
+    <x-header>{{__('ui.register')}}</x-header>
 
     <div class="container  my-5">
         <div class="row justify-content-center">
@@ -17,7 +18,7 @@
                     
                     <div class="mb-3">
                         
-                        <label for="email" class="form-label">Indirizzo Email</label>
+                        <label for="email" class="form-label"> Email</label>
                         <input type="email" name="email" class="form-control" id="email" aria-describedby="emailHelp">
                         
                     </div>
@@ -31,14 +32,16 @@
                     
                     <div class="mb-3">
                         
-                        <label for="password_confirmation" class="form-label"> Conferma Password</label>
+                        <label for="password_confirmation" class="form-label"> {{__('ui.confirm')}} Password</label>
                         <input type="password" name="password_confirmation" class="form-control" id="password_confirmation">
                         
                     </div>
                     
-                    <button type="submit" class="btn bg-btn mb-3">Registrati</button>
+                    <button type="submit" class="btn bg-btn mb-3">{{__('ui.register')}}</button>
                 </form>
             </div>
         </div>
     </div>
+
 </x-layout>
+

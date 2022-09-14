@@ -6,13 +6,20 @@
 		  
 			<!-- SINISTRA -->
 			<div class="me-5">
-				<p class="text-dark fs-5 fw-bold d-flex align-items-center mb-0">Vuoi diventare un revisore di annunci ?<button class="btn btn-revisore ms-2">Premimi<a href="{{route('become_revisor')}}"></a></button></p>
+			
+			<p class="text-dark fs-5 fw-bold d-flex align-items-center mb-0">
+				{{__('ui.becomeRevisor')}}
+				<a href="{{route('become_revisor')}}">
+			<button class="btn  btn-revisore ms-2">{{__('ui.click')}}
+			</button>
+			</a>
+			</p>
 			</div>
 
 			<!-- DESTRA -->
 			<div class="d-flex align-items-center">
 			
-				<span class="dark-blue-text me-4 fs-5 fw-bold mb-0">Resta in contatto con noi:</span>
+				<span class="dark-blue-text me-4 fs-5 fw-bold mb-0">{{__('ui.thisIsUs')}}</span>
 				<a href="" class="dark-blue-text me-4">
 					<i class="fa-brands fa-facebook"></i>
 				</a>
@@ -52,7 +59,7 @@
 						<h6 class="text-uppercase fw-bold">Team Panda</h6>
 						<hr class="mb-4 mt-0 d-inline-block mx-auto hr-footer">
 						<p> Presto.it, per vendere le tue cianfrusaglie al piu' presto.</p>
-						 <div class="d-flex column-reverse ">Lingua: 
+						 <div class="d-flex column-reverse ">{{__('ui.language')}} 
 							 <x-_locale  lang='it' nation='it'/> 
 							 <x-_locale lang='en' nation='gb'/>
 							<x-_locale lang='es' nation='es'/>
@@ -63,12 +70,12 @@
 					<div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
 					
 						<!-- Links -->
-						<h6 class="text-uppercase fw-bold">Categorie:</h6>
+						<h6 class="text-uppercase fw-bold">{{__('ui.categories')}}:</h6>
 						<hr class="mb-4 mt-0 d-inline-block mx-auto hr-footer">
-						<p><a href="#!" class="text-white">Automobili</a></p>
-						<p><a href="#!" class="text-white">Elettronica</a></p>
-						<p><a href="#!" class="text-white">Immobili</a></p>
-						{{-- <p><a href="#!" class="text-white">Film e TV</a></p> --}}
+						<p><a href="#!" class="text-white">{{__('ui.cars')}}</a></p>
+						<p><a href="#!" class="text-white">{{__('ui.tech')}}</a></p>
+						<p><a href="#!" class="text-white">{{__('ui.proprieties')}}</a></p>
+						 <p><a href="#!" class="text-white">{{__('ui.film')}}</a></p> 
 						
 					</div>
 
@@ -76,12 +83,11 @@
 					<div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
 					
 						<!-- Links -->
-						<h6 class="text-uppercase fw-bold">Link utili:</h6>
+						<h6 class="text-uppercase fw-bold">Link {{__('ui.link')}}:</h6>
 						<hr class="mb-4 mt-0 d-inline-block mx-auto hr-footer">
 						<p><a href="#!" class="text-white">Account</a></p>
-						<p><a href="{{route('become_revisor')}}" class="text-white">Diventa un revisore</a></p>
-						<p><a href="#!" class="text-white">Categorie</a></p>
-						{{-- <p><a href="#!" class="text-white">Contatti</a></p> --}}
+						<p><a href="#!" class="text-white">{{__('ui.categories')}}</a></p>
+					
 					
 					</div>
 
@@ -90,7 +96,7 @@
 					<div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
 					
 						<!-- Links -->
-						<h6 class="text-uppercase fw-bold">Contatti:</h6>
+						<h6 class="text-uppercase fw-bold">{{__('ui.contacts')}}:</h6>
 						<hr class="mb-4 mt-0 d-inline-block mx-auto hr-footer">
 						<p><i class="fas fa-home mr-3"></i> Aulab, Strada S. Giorgio M. 2D, Bari</p>
 						<p><i class="fas fa-envelope mr-3"></i> Presto.it </p>

@@ -7,11 +7,11 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link" href="{{route('ad.index')}}">Tutti gli annunci</a>
+                    <a class="nav-link" href="{{route('ad.index')}}">{{ __('ui.allAds') }}</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Categorie
+                       {{__('ui.categories')}}
                     </a>
                     <ul class="dropdown-menu bg-dropDown" aria-labelledby="navbarDropdown">
                         @foreach($categories as $category)
@@ -27,8 +27,8 @@
                     <i class="fa-solid fa-user"></i>
                 </a>
                 <ul class="dropdown-menu dropdown-menu-end bg-dropDown" aria-labelledby="navbarDropdown">
-                    <li><a class="dropdown-item" href="{{route('register')}}">Register</a></li>
-                    <li><a class="dropdown-item" href="{{route('login')}}">Login</a></li>
+                    <li><a class="dropdown-item" href="{{route('register')}}">{{__('ui.register')}}</a></li>
+                    <li><a class="dropdown-item" href="{{route('login')}}">{{__('ui.login')}}</a></li>
                 </ul>
             </li>
             @else
@@ -36,7 +36,7 @@
             <li class="nav-item nav-link me-5">
                 <a class="nav-link btn btn-sm position-relative" aria-current="page"
                     href="{{ route('revisor.index') }}">
-                    Zona Revisore
+                    {{__('ui.zonaRevisore')}}
                     <span
                         class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-pallino">
                         {{ App\Models\Ad::toBeRevisionedCount() }}
@@ -50,9 +50,9 @@
                     <span><i class="fa-solid fa-user"></i> {{Auth::user()->name}}</span>
                 </a>
                 <ul class="dropdown-menu dropdown-menu-end bg-dropDown" aria-labelledby="navbarDropdown">
-                    <li><a class="dropdown-item" href="{{route('ad.create')}}">Inserisci annuncio</a></li>
+                    <li><a class="dropdown-item" href="{{route('ad.create')}}">{{__('ui.insertAd')}}</a></li>
                     <li><a class="dropdown-item" href="#"
-                        onclick="event.preventDefault(); document.querySelector('#form-logout').submit();">Esci</a>
+                        onclick="event.preventDefault(); document.querySelector('#form-logout').submit();">{{__('ui.exit')}}</a>
                     </li>
                     <form action="{{ route('logout') }}" id="form-logout" class="d-none" method="POST">
                         @csrf
@@ -62,7 +62,7 @@
             @endguest
             <form id="padre" class="d-flex" role="search" action="{{route('ads.search')}}" method="GET">
                 
-                <input id="formCustom" class="form-control margine me-2 bg-searchBar" name="searched" type="search" placeholder="Search" aria-label="Search">
+                <input id="formCustom" class="form-control margine me-2 bg-searchBar" name="searched" type="search" placeholder="{{__('ui.search')}}" aria-label="Search">
                 
             </form>
             

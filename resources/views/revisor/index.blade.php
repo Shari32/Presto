@@ -5,7 +5,7 @@
     <div class="row">
         <div class="col-12 text-light text-center mb-4">
             <h1 class="display-2 revisor-title">
-                {{$ad_to_check ? 'Annuncio da revisionare:' : 'Non ci sono annunci da revisionare.'}}
+                {{$ad_to_check ?  __('ui.adRevisor') : __('ui.noAds')}}
             </h1>
             <div class="space"></div>
         </div>
@@ -64,7 +64,7 @@
                 <p class="card-text" style="font-size: 20px; font-weight: bold">Descrizione:</p>
                     <p>{{$ad_to_check->description}}</p>
                 <hr>
-                    <p class="card-footer text-center">Pubblicato il: {{$ad_to_check->created_at->format('d/m/Y')}} | Inserzionista: </p>
+                    <p class="card-footer text-center">Pubblicato il: {{$ad_to_check->created_at->format('d/m/Y')}} | Inserzionista: {{Auth::user()->name}} </p>
 
             </div>
 
@@ -76,7 +76,7 @@
                 <form action="{{route('revisor.accept_ad',['ad'=>$ad_to_check])}}" method="POST">
                     @csrf
                     @method('PATCH')
-                    <button type="submit" class="btn btn-success shadow">Accetta</button>
+                    <button type="submit" class="btn btn-success shadow">{{__('ui.accepted')}}</button>
                 </form>
             </div>
 
@@ -84,7 +84,7 @@
                 <form action="{{route('revisor.reject_ad',['ad'=>$ad_to_check])}}" method="POST">
                     @csrf
                     @method('PATCH')
-                    <button type="submit" class="btn btn-danger shadow">Rifiuta</button>
+                    <button type="submit" class="btn btn-danger shadow">{{__('ui.reject')}}</button>
                 </form>
             </div>
 

@@ -1,6 +1,6 @@
 <x-layout>
 
-    <x-header>Inserisci Annuncio</x-header>
+    <x-header>{{__('ui.insertAd')}}</x-header>
 
     @livewire('ad-create-form')
     
