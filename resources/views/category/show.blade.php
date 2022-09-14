@@ -10,7 +10,7 @@
                 <div class="card px-3 py-3 my-3 shadow-lg">
                     {{-- unisce la funzione isset() con l'operatore ternario --}}
                     <div class="card-custom-image">
-                    <img src="{{!$ad->images()->get()->isEmpty() ? $ad->images()->first()->getUrl(400,300) :'https://picsum.photos/200'}}" class="card-img-top"
+                    <img src="{{!$ad->images()->get()->isEmpty() ? $ad->images()->first()->getUrl(400,300) : Storage::url('/image/img_non_pervenuta.png')}}" class="card-img-top"
                         alt="{{ $ad->title }}">
                         <span class="d-flex justify-content-center">
                             <p class="badge card-custom-price text-wrap mt-3"> {{ $ad->price }}€ </p>
