@@ -61,7 +61,7 @@
 
       </div>
       <div class="my-5 text-center">
-        <a href="{{route('homepage')}}" class="btn btn-info">Torna indietro</a>
+        <a href="{{route('homepage')}}" class="btn btn-revisore">Torna indietro</a>
       </div>
     </div>
   </div>
