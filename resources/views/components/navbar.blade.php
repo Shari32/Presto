@@ -62,6 +62,9 @@
                     <li><a class="dropdown-item" href="#"
                         onclick="event.preventDefault(); document.querySelector('#form-logout').submit();">{{__('ui.exit')}}</a>
                     </li>
+                    <form action="{{ route('logout') }}" id="form-logout" class="d-none" method="POST">
+                        @csrf
+                    </form>
 
                 </div>
             @endguest
