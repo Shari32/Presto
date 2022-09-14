@@ -35,17 +35,8 @@ body {
 
 h1 {
     color: var(--lightblue);
-    text-shadow: 2px 2px 2px var(--yellow1);
+    text-shadow: 2px 2px 2px orange;
 }
-
-/* .box {
-    background-color: rgba(255, 0, 0, 0.8);
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    width: 500px;
-    height: 60px;
-} */
 
 .revisor-title {
     color: white;
@@ -63,9 +54,39 @@ h1 {
     border-radius: 20px;
 }
 
+.box-titolo {
+    background-color: var(--lightyellow);
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    height: auto;
+    border-radius: 20px;
+    margin-bottom: 0px;
+    padding: 5px;
+    border: 3px solid var(--medblue);
+}
 
 .bg-revisor {
     background-color: var(--medblue);
+}
+
+.colore-inserzione {
+    background-color: #FCF6E8;
+}
+
+.scontornamitutto {
+    background-color: #FCF6E8 !important;
+    border-radius: 5px;
+}
+
+.lovogliobianco {
+    background-color: white;
+}
+
+.occupazione{
+    height: 100vh;
 }
 
 /* NAVBAR */
@@ -182,6 +203,26 @@ h1 {
 
 }
 
+/* script pazzo di Dan */
+
+.description-card-custom{
+
+    text-align: center;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    
+}
+
+.description-custom{
+
+    word-break: break-all;
+
+}
+
+/* fine script pazzo di Dan */
+
 .badge {
     font-size: large !important;
     /* z-index: 2 !important; */
@@ -243,6 +284,23 @@ a:hover {
 }
 
 .btn-revisore:hover {
+
+    transition: 0.5s;
+    color: var(--yellow1);
+    background-color: var(--medblue);
+    border: 3px solid var(--darkblue);
+    text-decoration: none;
+}
+
+.btn-dettagli {
+    background-color: var(--yellow1);
+    border: 3px solid var(--medblue);
+    color: var(--darkblue);
+    transition: 0.5s;
+    text-decoration: none;
+}
+
+.btn-dettagli:hover {
 
     transition: 0.5s;
     color: var(--yellow1);

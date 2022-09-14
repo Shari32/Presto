@@ -67,7 +67,7 @@
                     <div class="row">
                         <div class="col-12">
                             <p>Photo preview:</p>
-                            <div class="row border border-4 border-info rounded shadow py-4">
+                            <div class="row border border-4 mb-3 mx-1 rounded shadow py-4">
                                 @foreach($images as $key=> $image)
                                 <div class="col my-3">
                                     <div class="img-preview  mx-auto shadow rounded " style="  background-image: url({{$image->temporaryUrl()}}); " ></div>
@@ -79,8 +79,12 @@
                     </div>
                     @endif
 
+                    <div class="d-flex justify-content-end p-0">
 
-                    <button type="submit" class="btn bg-btn my-3">{{__('ui.insertAd')}}</button>
+                        <button type="submit" class="btn bg-btn mb-3">{{__('ui.insertAd')}}</button>
+
+                    </div>
+
     </form>
 </div>
 

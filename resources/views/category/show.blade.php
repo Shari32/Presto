@@ -19,15 +19,15 @@
                     <hr class="mt-0">
                     <h5 class="text-center">{{ $ad->title }}</h5>
                     <div>
-                        <p class="fst-italic dark-blue-text text-center">{{ $ad->description }}</p>
+                        <p class="fst-italic dark-blue-text text-center description-card-custom">{{ $ad->description }}</p>
                         <p class="text-center"> Categoria: {{ $ad->category->category }}</p>
                         <a href="{{ route('ad.show', compact('ad')) }}" class="btn btn-revisore mt-3 mb-2 mx-2 d-flex justify-content-center">Dettaglio</a>
                     </div>
                 </div>
             </div>
             @empty
-                <h2>{{__('ui.noAds')}}</h2>
-                
+                <h2 class="bg-white text-center">{{__('ui.noAds')}}</h2>
+                <div class="occupazione"></div>
             @endforelse
 
         </div>
