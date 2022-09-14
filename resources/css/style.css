@@ -9,13 +9,20 @@
 
 /* GENERICS */
 
-.space{
-    height: 300px;
+.boxColor {
+
+    background-color: var(--yellow1);
+    border: 5px 5px solid var(--yellow1);
+    width: 850px;
+    height: 750px;
+    position: absolute;
+    top: 350px ;
+    z-index: -1;
 }
 
-body {
+/* body {
     background-color: #FCF6E8
-}
+} */
 
 h1 {
     color: var(--lightblue);
@@ -130,28 +137,31 @@ h1 {
 
 .dropdown-item:hover,
 .dropdown-item:focus {
-    background-color: var(--medblue);
+    background-color: var(--lightblue);
 }
 
 /* CARDS */
 
-/* .card {
-    height: 500px !important;
-    width: 500px !important;
-} */
+.card {
+
+    min-width: 300px;
+    max-width: 300px;
+    border: 2px solid var(--medblue);
+    background-color: #FCF6E8;
+}
 
 .card-custom-image {
+
     position: center;
-    background-color: var(--yellow1);
+    /* background-color: var(--yellow1); */
 }
 
 .card-custom-price {
-    color: black;
+
     text-align: center;
-    background-color: white;
-    border: 2px solid;
-    border-radius: 10px;
-    border-color: var(--lightblue);
+    background-color: var(--medblue);
+    color: var(--yellow1);
+
 }
 
 .badge {
