@@ -2,7 +2,7 @@
 
     <x-header>{{ __('ui.welcome') }}</x-header>
    
-    <div class="container my-5">
+    <div class="container-fluid my-5">
         <div class="row justify-content-center">
 
             @if(session()->has('access.denied'))

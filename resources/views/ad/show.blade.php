@@ -2,7 +2,7 @@
 
   <x-header>{{$ad->title}}</x-header>
 
-  <div class="container my-5">
+  <div class="container my-5 bg-white container-border">
     <div class="row justify-content-center">
       <div class="col-12 col-md-8 mb-5">
 

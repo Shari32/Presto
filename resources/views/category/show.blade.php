@@ -1,6 +1,6 @@
 <x-layout>
 
-    <x-header>{{__('ui.expCategory')}}: {{$category->category}}</x-header>
+    <x-header>{{$category->category}}</x-header>
 
     <div class="container my-5">
         <div class="row justify-content-center">

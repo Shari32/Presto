@@ -9,25 +9,43 @@
 
 /* GENERICS */
 
-.boxColor {
-
-    background-color: var(--yellow1);
-    border: 5px 5px solid var(--yellow1);
-    width: 850px;
-    height: 750px;
-    position: absolute;
-    top: 350px ;
-    z-index: -1;
+.container-border {
+    border: solid 2px var(--medblue);
 }
 
-/* body {
-    background-color: #FCF6E8
+/* .boxColor {
+
+    position: absolute;
+    background-color: var(--yellow1);
+    width: 850px;
+    height: 750px;
+    z-index: -1;
+    top: 350px;
 } */
+
+body {
+    background:
+        radial-gradient(circle, transparent 20%, white 20%, white 80%, transparent 80%, transparent),
+        radial-gradient(circle, transparent 20%, white 20%, white 80%, transparent 80%, transparent) 50px 50px,
+        linear-gradient(#001D3D 8px, transparent 8px) 0 -4px,
+        linear-gradient(90deg, #001D3D 8px, transparent 8px) -4px 0;
+    background-color: white;
+    background-size: 100px 100px, 100px 100px, 50px 50px, 50px 50px;
+}
 
 h1 {
     color: var(--lightblue);
-    text-shadow: 2px 2px 2px var(--yellow1)
+    text-shadow: 2px 2px 2px var(--yellow1);
 }
+
+/* .box {
+    background-color: rgba(255, 0, 0, 0.8);
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    width: 500px;
+    height: 60px;
+} */
 
 .revisor-title {
     color: white;
@@ -235,21 +253,21 @@ a:hover {
 
 /* form ad.create livewire */
 
-.img-preview{
+.img-preview {
 
- 
 
- width: 300px;
- height: 300px;
- background-size:cover;  
- background-position:center;  
+
+    width: 300px;
+    height: 300px;
+    background-size: cover;
+    background-position: center;
 
 }
 
 
 /* CAROUSEL */
 
-.carousel-inner {
+/* .carousel-inner {
 
     position: relative;
     width: 50%;
@@ -260,12 +278,12 @@ a:hover {
 .carousel-item {
 
     position: relative;
-    display: none;
+    display: flex;
     float: left;
-    width: 50%;
+    width: 75%;
     margin-right: -100%;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     transition: transform 0.6s ease-in-out;
 
-  }
+} */
