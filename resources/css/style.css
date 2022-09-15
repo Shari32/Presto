@@ -9,6 +9,18 @@
 
 /* GENERICS */
 
+@media screen and (max-width: 540px) {
+    .btn-custom {
+        display: none;
+    }
+    #padre {
+        display: none;
+    }
+    #formCustom {
+        display: none;
+    }
+}
+
 .container-border {
     border: solid 2px var(--medblue);
 }
@@ -117,6 +129,15 @@ h1 {
 
 }
 
+.badge {
+
+    font-size: 16px;
+    padding: 7px;
+    font-weight: lighter;
+    margin-left: 5px;
+
+}
+
 .btn-custom {
 
     width: 50px;
@@ -178,6 +199,25 @@ h1 {
 .dropdown-item:focus {
     background-color: var(--lightblue);
 }
+
+/* @media screen and (min-width: 500px) {
+    #customDropDownSM {
+        display: none;
+    }
+} */
+
+
+
+.display {
+    display: none !important;
+}
+
+/* @media screen and (max-width: 2000px) {
+    #customDropDownLG {
+        display: none;
+    }
+} */
+
 
 /* CARDS */
 

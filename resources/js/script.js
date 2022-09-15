@@ -8,6 +8,30 @@ let formPadre = document.querySelector(`#padre`);
 let isClicked = true;
 
 
+
+
+
+let sm = window.matchMedia("(max-width:520px)");
+let ddSM = document.querySelector('#customDropDownSM');
+let ddLG = document.querySelector('#customDropDownLG');
+
+
+
+function dropDown(sm) {
+
+    if (sm.matches) {
+        ddLG.classList.remove('display');
+        ddSM.classList.add('display');
+
+    } else {
+        ddSM.classList.remove('display');
+        ddLG.classList.add('display');
+    }
+
+}
+
+
+
 research.addEventListener('click', ()=>{
 
     if(isClicked){
@@ -22,7 +46,13 @@ research.addEventListener('click', ()=>{
         isClicked = true;
 
     }
-})
+});
+
+
+
+
+
+
 
 // FORM CREAZIONE ANNUNCIO
 
