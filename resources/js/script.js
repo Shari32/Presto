@@ -7,7 +7,7 @@ let formPadre = document.querySelector(`#padre`);
 
 let isClicked = true;
 
-let dropDown = document.querySelector ('#customDropDown');
+
 
 
 
@@ -18,15 +18,16 @@ let ddLG = document.querySelector('#customDropDownLG');
 
 
 function dropDown(sm) {
-    if (sm.matches) {
-        ddLG.classList.remove('d-none');
-        ddSM.classList.add('d-none');
 
+    if (sm.matches) {
+        ddLG.classList.remove('display');
+        ddSM.classList.add('display');
 
     } else {
-        ddSM.classList.remove('d-none');
-        ddLG.classList.add('d-none');
+        ddSM.classList.remove('display');
+        ddLG.classList.add('display');
     }
+
 }
 
 
@@ -49,7 +50,7 @@ research.addEventListener('click', ()=>{
 
 
 
-dropDown.classList.remove(`dropdown-menu-end`);
+
 
 
 
