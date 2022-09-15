@@ -102,7 +102,7 @@ class AdCreateForm extends Component
         }
 
         $this->reset();
-        session()->flash('message', 'Hai correttamente inserito il tuo annuncio, sarà pubblicato dopo la revisione.');
+       session()->flash('message', 'Hai correttamente inserito il tuo annuncio, sarà pubblicato dopo la revisione.');
     }
 
     public function cleanForm()

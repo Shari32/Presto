@@ -27,7 +27,7 @@
             @empty
                 <div class="col-12">
                     <div class="alert alert-warning py-3 shadow">
-                        <p class="lead mb-0">Non ci sono annunci per questa ricerca. Prova a cambiare ricerca</p>
+                        <p class="lead mb-0 ">Non ci sono annunci per questa ricerca. Prova a cambiare ricerca</p>
                     </div>
                 </div>
                 <div class="occupazione"></div>

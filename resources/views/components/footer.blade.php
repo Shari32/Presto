@@ -2,45 +2,56 @@
 	<footer class="text-center text-lg-start text-white footer-color">
   
 		<!-- Sezione SOCIAL MEDIA -->
-		<section class="d-flex justify-content-between p-4 section-footer">
-		  
-			<!-- SINISTRA -->
-			<div class="me-5">
-			
-			<p class="text-dark fs-5 fw-bold d-flex align-items-center mb-0">
-				{{__('ui.becomeRevisor')}}
-				<a href="{{route('become_revisor')}}">
-			<button class="btn  btn-revisore ms-2">{{__('ui.click')}}
-			</button>
-			</a>
-			</p>
+		<section class="d-flex flex-sm-column  justify-content-md-between p-4 section-footer">
+		  <div class="row">
+
+			<div class="col-12 col-md-6">
+				<div class="me-5">
+				
+				<p class="text-dark fs-5 fw-bold  query-footer  d-flex align-items-md-center mb-0">
+					{{__('ui.becomeRevisor')}}
+					<a href="{{route('become_revisor')}}">
+				<button class="btn  btn-revisore ms-md-2 mt-sm-5 mt-md-0   mb-sm-5 mb-md-0">{{__('ui.click')}}
+				</button>
+				</a>
+				</p>
+				</div>
+
 			</div>
 
-			<!-- DESTRA -->
-			<div class="d-flex align-items-center">
-			
-				<span class="dark-blue-text me-4 fs-5 fw-bold mb-0">{{__('ui.thisIsUs')}}</span>
-				<a href="" class="dark-blue-text me-4">
-					<i class="fa-brands fa-facebook"></i>
-				</a>
+			<div class="col-12 col-md-6">
+				<!-- DESTRA -->
+				<div class="d-flex   align-items-center">
 				
-				<a href="" class="dark-blue-text me-4">
-					<i class="fa-brands fa-instagram"></i>
-				</a>
-				
-				<a href="" class="dark-blue-text me-4">
-					<i class="fa-brands fa-twitter"></i>
-				</a>
-				
-				<a href="" class="dark-blue-text me-4">
-					<i class="fa-brands fa-telegram"></i>
-				</a>
-				
-				<a href="" class="dark-blue-text me-4">
-					<i class="fa-brands fa-linkedin"></i>
-				</a>
-				
+					<span class="dark-blue-text me-4  query-footer  fs-5 fw-bold mb-0">{{__('ui.thisIsUs')}}</span>
+					<a href="" class="dark-blue-text me-4">
+						<i class="fa-brands fa-facebook"></i>
+					</a>
+					
+					<a href="" class="dark-blue-text me-4">
+						<i class="fa-brands fa-instagram"></i>
+					</a>
+					
+					<a href="" class="dark-blue-text me-4">
+						<i class="fa-brands fa-twitter"></i>
+					</a>
+					
+					<a href="" class="dark-blue-text me-4">
+						<i class="fa-brands fa-telegram"></i>
+					</a>
+					
+					<a href="" class="dark-blue-text me-4">
+						<i class="fa-brands fa-linkedin"></i>
+					</a>
+					
+				</div>
+
 			</div>
+
+
+		  </div>
+			<!-- SINISTRA -->
+
 			
 		</section>
 
