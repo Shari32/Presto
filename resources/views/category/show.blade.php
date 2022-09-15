@@ -26,7 +26,7 @@
                 </div>
             </div>
             @empty
-                <h2 class="bg-white text-center">{{__('ui.noAds')}}</h2>
+                <h2 class="bg-white text-center ">{{__('ui.noAds')}}</h2>
                 <div class="occupazione"></div>
             @endforelse
 

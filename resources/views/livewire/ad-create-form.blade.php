@@ -81,7 +81,7 @@
 
                     <div class="d-flex justify-content-end p-0">
 
-                        <button type="submit" class="btn bg-btn mb-3">{{__('ui.insertAd')}}</button>
+                        <button type="submit" onclick="topFunction()" id="myBtn" class="btn bg-btn mb-3">{{__('ui.insertAd')}}</button>
 
                     </div>
 

@@ -42,7 +42,7 @@
                     </div>
                 </div>
             @empty
-                <h2>{{__('ui.noAds')}}</h2>
+                <h2 class="box-titolo">{{__('ui.noAds')}}</h2>
             @endforelse
 
         </div>

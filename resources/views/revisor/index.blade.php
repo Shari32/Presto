@@ -4,7 +4,7 @@
 
     <div class="row">
         <div class="col-12 text-light text-center mb-4">
-            <h1 class="display-2 revisor-title">
+            <h1 class="display-2 revisor-title box-titolo">
 
                 {{$ad_to_check ?  __('ui.adRevisor') : __('ui.noAds')}}
                 

@@ -23,3 +23,22 @@ research.addEventListener('click', ()=>{
 
     }
 })
+
+// FORM CREAZIONE ANNUNCIO
+
+let mybutton = document.getElementById("myBtn");
+
+
+mybutton.addEventListener('click', ()=>{
+
+    if(isClicked){
+
+            document.body.scrollTop = 0; 
+            document.documentElement.scrollTop = 0; 
+
+    }else{
+
+    }
+
+
+})
