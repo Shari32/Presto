@@ -2,11 +2,11 @@
 
   <x-header>{{$ad->title}}</x-header>
 
-  <div class="container my-5 bg-white container-border">
+  <div class="container my-5 colore-inserzione container-border">
     <div class="row justify-content-center">
       <div class="col-12 col-md-8 mb-5">
 
-        <hr>
+        {{-- <hr> --}}
 
 
         <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
@@ -23,18 +23,10 @@
 
           @else
 
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <img  src="https://picsum.photos/300/400" class="d-block w-100" alt="...">
-              </div>
-              <div class="carousel-item ">
-                <img src="https://picsum.photos/300/400" class="d-block w-100" alt="...">
-              </div>
-              <div class="carousel-item">
-                <img src="https://picsum.photos/300/400" class="d-block w-100" alt="...">
-              </div>
+            <div class=" d-flex justify-content-center">
+                <img src="{{Storage::url('/image/img_non_pervenuta.png')}}" class="img-fluid p-3 rounded" alt="img_missing">
             </div>
-          
+
          @endif
           <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -46,18 +38,20 @@
           </button>
         </div>
 
-        <hr>
-
-        <h2 class="fs-3 fw-bold">Prezzo: {{$ad->price}}€</h2>
+        {{-- <hr> --}}
+        <div class=" d-flex justify-content-center align-items-center ">
+          <h2>Prezzo: </h2> <h2 class="badge card-custom-price text-wrap mt-2 ms-2"> {{ $ad->price }}€ </h2>
+        </div>
+        
       </div>
       <hr>
       <div class="col-12 col-md-8 my-5">
-        <p class="fs-4">Descrizione:</p>
-        <p class="fs-4">{{$ad->description}}</p>
+        <p class="fs-4 fw-bold">Descrizione:</p>
+        <p class="fs-4 description-custom">{{$ad->description}}</p>
         <hr>
-        <p class="fs-4">Categoria: {{$ad->category->category}}</p>
+        <p class="fs-4 fw-bold">Categoria: <span class="fw-normal"> {{$ad->category->category}} </span> </p>
         <hr>
-        <p class="fs-4">Venditore: {{ $ad->user->name ?? 'sconosciuto' }}</p>
+        <p class="fs-4 fw-bold">Venditore: <span class="fw-normal"> {{ $ad->user->name ?? 'Sconosciuto' }} </span> </p>
 
       </div>
       <div class="my-5 text-center">

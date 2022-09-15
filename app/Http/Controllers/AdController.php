@@ -10,7 +10,7 @@ class AdController extends Controller
    
     public function index(){
 
-        $ads=Ad::where('is_accepted', true)->paginate(6);
+        $ads=Ad::where('is_accepted', true)->paginate(8);
   
           return view('ad.index',compact('ads'));
       }

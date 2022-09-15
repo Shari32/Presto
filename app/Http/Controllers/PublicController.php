@@ -12,7 +12,7 @@ class PublicController extends Controller
     {
 
         // $ads = Ad::orderBy('created_at', 'DESC')->where('is_accepted', true)->paginate(6);
-        $ads=Ad::where('is_accepted', true)->orderBy('created_at', 'DESC')->paginate(10);
+        $ads=Ad::where('is_accepted', true)->orderBy('created_at', 'DESC')->paginate(6);
        
 
         return view('welcome', compact('ads'));
@@ -26,7 +26,7 @@ class PublicController extends Controller
 
     public function searchAds(Request $request)
     {
-        $ads = Ad::search($request->searched)->where('is_accepted', true)->paginate(10);
+        $ads = Ad::search($request->searched)->where('is_accepted', true)->paginate(6);
 
         return view('ad.index', compact('ads'));
     }

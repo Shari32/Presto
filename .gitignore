@@ -16,4 +16,4 @@ yarn-error.log
 /.vscode
 /storage/articles.index-shm
 /storage/articles.index-wal
-GOOGLE_CREDENTIAL.json
+google_credential.json
