@@ -7,6 +7,29 @@ let formPadre = document.querySelector(`#padre`);
 
 let isClicked = true;
 
+let dropDown = document.querySelector ('#customDropDown');
+
+
+
+let sm = window.matchMedia("(max-width:520px)");
+let ddSM = document.querySelector('#customDropDownSM');
+let ddLG = document.querySelector('#customDropDownLG');
+
+
+
+function dropDown(sm) {
+    if (sm.matches) {
+        ddLG.classList.remove('d-none');
+        ddSM.classList.add('d-none');
+
+
+    } else {
+        ddSM.classList.remove('d-none');
+        ddLG.classList.add('d-none');
+    }
+}
+
+
 
 research.addEventListener('click', ()=>{
 
@@ -22,26 +45,12 @@ research.addEventListener('click', ()=>{
         isClicked = true;
 
     }
-})
-
-// FORM CREAZIONE ANNUNCIO
-
-let mybutton = document.getElementById("myBtn");
+});
 
 
-mybutton.addEventListener('click', ()=>{
 
-    if(isClicked){
+dropDown.classList.remove(`dropdown-menu-end`);
 
-            document.body.scrollTop = 0; 
-            document.documentElement.scrollTop = 0; 
-
-    }else{
-
-    }
-
-
-})
 
 
 // FORM CREAZIONE ANNUNCIO

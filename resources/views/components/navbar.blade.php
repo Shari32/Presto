@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-lg sticky-top">
     <div class="container-fluid">
         <a class="navbar-brand nav-link" href="{{ route('homepage') }}">Presto.it</a>
-        <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -30,18 +30,31 @@
                 </li>
             </ul>
             @guest
-            <li class="nav-item dropdown nav-link">
+            <li id="customDropDownLG" class="nav-item dropdown nav-link">
                 <a class="nav-link dropdown-toggle me-5" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     <i class="fa-solid fa-user"></i>
                 </a>
-                <ul class="dropdown-menu dropdown-menu-end bg-dropDown" aria-labelledby="navbarDropdown">
+                <ul  class="dropdown-menu d-flex justify-content-end bg-dropDown" aria-labelledby="navbarDropdown">
                     <li><a class="dropdown-item" href="{{route('register')}}">{{__('ui.register')}}</a></li>
                     <li><a class="dropdown-item" href="{{route('login')}}">{{__('ui.login')}}</a></li>
                 </ul>
+
             </li>
+
+            <li id="customDropDownSM" class="nav-item dropdown nav-link">
+                <a class="nav-link dropdown-toggle me-5" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="fa-solid fa-user"></i>
+                </a>
+                <ul class="dropdown-menu bg-dropDown" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item" href="{{route('register')}}">{{__('ui.register')}}</a></li>
+                    <li><a class="dropdown-item" href="{{route('login')}}">{{__('ui.login')}}</a></li>
+                </ul>
+
+            </li>
+
             @else
             @if (Auth::user()->is_revisor)
-            <li class="nav-item nav-link me-5">
+            <li class="nav-item nav-link me-5 ">
                 <a class="nav-link btn btn-sm position-relative" aria-current="page"
                     href="{{ route('revisor.index') }}">
                     {{__('ui.zonaRevisore')}}
