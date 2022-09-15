@@ -51,7 +51,7 @@
         <hr>
         <p class="fs-4 fw-bold">Categoria: <span class="fw-normal"> {{$ad->category->category}} </span> </p>
         <hr>
-        <p class="fs-4 fw-bold">Venditore: <span class="fw-normal"> {{ $ad->user->name ?? 'Sconosciuto' }} </span> </p>
+        <p class="fs-4 fw-bold">Venditore: <span class="fw-normal"> {{ Auth::user()->name ?? 'Sconosciuto' }} </span> </p>
 
       </div>
       <div class="my-5 text-center">

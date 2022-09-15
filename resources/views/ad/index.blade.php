@@ -5,7 +5,7 @@
         <div class="row justify-content-center">
 
             @forelse ($ads as $ad)
-            <div class="col-12 col-md-3 mb-3 d-flex justify-content-center">
+            <div class="col-12 col-md-3  mb-3 d-flex justify-content-center">
                 <div class="card px-3 py-3 my-3 shadow-lg">
                     {{-- unisce la funzione isset() con l'operatore ternario --}}
                     <div class="card-custom-image">
@@ -43,3 +43,4 @@
 
 
 </x-layout>
+
