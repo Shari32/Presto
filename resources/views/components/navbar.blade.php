@@ -1,6 +1,9 @@
-<nav class="navbar navbar-expand-lg sticky-top">
+<nav class="navbar navbar-expand-lg sticky-top fs-5 p-3">
     <div class="container-fluid">
-        <a class="navbar-brand nav-link" href="{{ route('homepage') }}">Presto.it</a>
+        <a href="{{ route('homepage') }}">
+
+            <img  class=" logo" src="{{Storage::url('/image/logo.png')}}" alt="">
+        </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -16,6 +19,11 @@
                 <li class="nav-item">
                     <a class="nav-link" href="{{ route('ad.index') }}">{{ __('ui.allAds') }}</a>
                 </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('ad.create') }}">{{ __('ui.insertAd') }}</a>
+                </li>
+
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                         data-bs-toggle="dropdown" aria-expanded="false">
@@ -48,11 +56,11 @@
         
             @else
                 @if (Auth::user()->is_revisor)
-                    <li class="nav-item nav-link me-md-5 m-xs-0" style="text-align:right">
-                        <a class="nav-link btn btn-sm position-relative d-flex justify-content-end" aria-current="page"
+                    <li class="nav-item nav-link me-md-5 m-xs-0 " style="text-align:right">
+                        <a class="nav-link btn btn-sm position-relative d-flex justify-content-end " aria-current="page"
                             href="{{ route('revisor.index') }}">
                             {{ __('ui.zonaRevisore') }}
-                            <span class="badge rounded-pill bg-pallino">
+                            <span class="badge rounded-pill bg-pallino ">
                                 {{ App\Models\Ad::toBeRevisionedCount() }}
                                 <span class="visually-hidden">unread messages</span>
                             </span>
@@ -65,7 +73,7 @@
                         <span><i class="fa-solid fa-user"></i> {{ Auth::user()->name }}</span>
                     </a>
                     <ul class="dropdown-menu dropdown-menu-end bg-dropDown" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="{{ route('ad.create') }}">{{ __('ui.insertAd') }}</a></li>
+                        <li><a class="dropdown-item" href="#">I tuoi Annunci</a></li>
                         <li><a class="dropdown-item" href="#"
                                 onclick="event.preventDefault(); document.querySelector('#form-logout').submit();">{{ __('ui.exit') }}</a>
                         </li>

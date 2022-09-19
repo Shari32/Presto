@@ -13,7 +13,7 @@
                     <img src="{{!$ad->images()->get()->isEmpty() ? $ad->images()->first()->getUrl(400,300) : Storage::url('/image/img_non_pervenuta.png')}}" class="card-img-top"
                         alt="{{ $ad->title }}">
                         <span class="d-flex justify-content-center">
-                            <p class="badge card-custom-price text-wrap mt-3"> {{ $ad->price }}€ </p>
+                            <p class="badge p-2 fw-bold card-custom-price text-wrap mt-3"> {{ $ad->price }}€ </p>
                         </span>
                     </div>
                     <hr class="mt-0">
@@ -21,7 +21,7 @@
                     <div>
                         <p class="fst-italic dark-blue-text text-center description-card-custom">{{ $ad->description }}</p>
                         <p class="text-center"> Categoria: {{ $ad->category->category }}</p>
-                        <a href="{{ route('ad.show', compact('ad')) }}" class="btn btn-revisore mt-3 mb-2 mx-2 d-flex justify-content-center">Dettaglio</a>
+                        <a href="{{ route('ad.show', compact('ad')) }}" class="btn btn-revisore fs-5 mt-3 mb-2 mx-2 d-flex justify-content-center">Dettaglio</a>
                     </div>
                 </div>
             </div>

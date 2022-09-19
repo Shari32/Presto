@@ -1,15 +1,15 @@
 <x-layout>
 
-  <x-header>{{$ad->title}}</x-header>
+  
 
-  <div class="container my-5 colore-inserzione container-border">
-    <div class="row justify-content-center">
-      <div class="col-12 col-md-8 mb-5">
+  <div class="container  colore-inserzione container-border my-5 ">
+    <div class="row justify-content-center align-items-center">
+      <div class="col-12 col-md-6 ">
 
         {{-- <hr> --}}
 
 
-        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+        <div id="carouselExampleControls" class="carousel slide my-5" data-bs-ride="carousel">
 
         @if ($ad->images->count() >0)
           <div class="carousel-inner">
@@ -39,26 +39,40 @@
         </div>
 
         {{-- <hr> --}}
-        <div class=" d-flex justify-content-center align-items-center ">
-          <h2>Prezzo: </h2> <h2 class="badge card-custom-price text-wrap mt-2 ms-2"> {{ $ad->price }}€ </h2>
-        </div>
+      
         
       </div>
+
+      <div class="col-12 col-md-6 ">
+       <div class="d-flex align-items-center justify-content-between" >
+          <h2 class="text-wrap description-custom">{{$ad->title}}</h2>
+          <!-- <div class="d-flex justify-content-end "> -->
+
+            <h2 class="badge card-custom-price  fw-bold text-center text-wrap p-2"> {{ $ad->price }}€ </h2>
+            
+          <!-- </div> -->
+      
+       </div>
+
       <hr>
-      <div class="col-12 col-md-8 my-5">
         <p class="fs-4 fw-bold">Descrizione:</p>
         <p class="fs-4 description-custom">{{$ad->description}}</p>
         <hr>
-        <p class="fs-4 fw-bold">Categoria: <span class="fw-normal"> {{$ad->category->category}} </span> </p>
+      
+          
+          <p class="fs-4 fw-bold ms-5 ">Categoria: <span class="fw-normal me-5"> {{$ad->category->category}} </span>   Venditore: <span class="fw-normal ">{{Auth::user()->name ?? 'Sconosciuto' }}</span> </p>
+       
         <hr>
-        <p class="fs-4 fw-bold">Venditore: <span class="fw-normal">{{Auth::user()->name ?? 'Sconosciuto' }}</span> </p>
-
+       
+        <div class="text-center d-flex justify-content-end ">
+        <a href="{{route('homepage')}}" class="btn btn-revisore  fs-5">Torna indietro</a>
       </div>
-      <div class="my-5 text-center">
-        <a href="{{route('homepage')}}" class="btn btn-revisore">Torna indietro</a>
       </div>
+      
     </div>
   </div>
+
+      <hr>
 
 </x-layout>
 

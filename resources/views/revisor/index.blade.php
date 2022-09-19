@@ -20,41 +20,41 @@
         @if($ad_to_check)
 
     
-        <div class="container-fluid bg-white d-flex flex-column align-items-center scontornamitutto pt-3">
+        <div class="container bg-white d-flex flex-column align-items-center scontornamitutto pt-3">
 
             <div class="row justify-content-center">
 
-                <div class="col-4 col-md-6 border lovogliobianco">
+                <div class="col-12  col-md-8 border lovogliobianco">
 
-                    <div id="showCarousel" class="carousel slide" data-bs-ride="carousel">
+                     <div id="carouselExampleControls" class="carousel" data-bs-ride="carousel">
 
                             @if ($ad_to_check->images->count() >0)
 
-                                <div class="carousel-inner">
+                                <div class=" row carousel-inner">
 
                                     @foreach($ad_to_check->images as $image)
 
                                         <div class="carousel-item @if($loop->first)active @endif">
-                                            <img src="{{$image->getUrl(400,300)}}" class="card-img-top" alt="">
+                                            <img src="{{$image->getUrl(400,300)}}" class=" img-fluid card-img-top bg-center" alt="">
                                         </div>
 
                                     @endforeach
 
                                 </div>
 
-                                <button class="carousel-control-prev" type="button" data-bs-target='#showCarousel' data-bs-slide='prev'>
+                                <button class="carousel-control-prev" type="button" data-bs-target='#carouselExampleControls' data-bs-slide='prev'>
                                     <span class="carousel-control-prev-icon" aria-hidden='true'></span>
                                     <span class="visually-hidden">Previous</span>
                                 </button>
         
-                                <button class="carousel-control-next" type="button" data-bs-target='#showCarousel' data-bs-slide='next'>
+                                <button class="carousel-control-next" type="button" data-bs-target='#carouselExampleControls' data-bs-slide='next'>
                                     <span class="carousel-control-next-icon" aria-hidden='true'></span>
                                     <span class="visually-hidden">Next</span>
                                 </button>
         
                         </div>
-        
-                        <h5 class="card-title" style="font-weight: bold">Titolo: <span style="font-weight: 400">{{$ad_to_check->title}}</span></h5> 
+                        
+                        <h5 class="card-title my-3 " style="font-weight: bold">Titolo: <span style="font-weight: 400">{{$ad_to_check->title}}</span></h5> 
                             <hr>
                         <p class="card-text" style="font-size: 20px; font-weight: bold">Descrizione:</p>
                             <p class="description-custom">{{$ad_to_check->description}}</p>
@@ -79,7 +79,7 @@
                                 <p>Medicina: <span class="{{$image->medical}}"></span> </p>
                                 <p>Satira: <span class="{{$image->spoof}}"></span> </p>
                                 <p>Violenza: <span class="{{$image->violence}}"></span> </p>
-                                <p>Sexy: <span class="{{$image->racy}}"></span> </p>
+                                <p>Ammicante: <span class="{{$image->racy}}"></span> </p>
 
                             </span>
 

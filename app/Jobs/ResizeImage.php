@@ -52,9 +52,11 @@ class ResizeImage implements ShouldQueue
             -> crop(Manipulations::CROP_CENTER, $w, $h) 
         
             -> watermark(base_path('resources/img/panda_wm.png'))
-                ->watermarkHeight(10, Manipulations::UNIT_PERCENT)    // 50 percent height
-                ->watermarkWidth(10, Manipulations::UNIT_PERCENT)   // 100 percent width
-
+                // ->watermarkHeight(400, Manipulations::UNIT_PERCENT)    // 50 percent height
+                // ->watermarkWidth(400, Manipulations::UNIT_PERCENT)   // 100 percent width
+                ->watermarkHeight(10, Manipulations::UNIT_PERCENT)
+                ->watermarkWidth(30, Manipulations::UNIT_PERCENT)
+             
             -> save($destPath);
     }
 }
