@@ -14,10 +14,10 @@
         @if ($ad->images->count() >0)
           <div class="carousel-inner">
             @foreach($ad->images as $image)
+         
             <div class="carousel-item @if($loop->first)active @endif">
-              <img src="{{Storage::url($image->path)}}" class="d-block w-100" alt="...">
-            </div>
-           
+              <img src="{{$image->getUrl(400,300)}}" class="card-img-top" alt="">
+          </div>
             @endforeach
           </div>
 
@@ -51,7 +51,7 @@
         <hr>
         <p class="fs-4 fw-bold">Categoria: <span class="fw-normal"> {{$ad->category->category}} </span> </p>
         <hr>
-        <p class="fs-4 fw-bold">Venditore: <span class="fw-normal"> {{ Auth::user()->name ?? 'Sconosciuto' }} </span> </p>
+        <p class="fs-4 fw-bold">Venditore: <span class="fw-normal">{{Auth::user()->name ?? 'Sconosciuto' }}</span> </p>
 
       </div>
       <div class="my-5 text-center">
