@@ -28,6 +28,8 @@ class AdCreateForm extends Component
     public $form_id;
     public $ad;
 
+    
+
     protected $rules = [
         'title' => 'required|min:5',
         'description' => 'required|min:10',
@@ -45,8 +47,8 @@ class AdCreateForm extends Component
         'temporary_images.*.max'=>'L\'immagine dev\'essere massimo di 1mb',
         'images.image'=> 'L\'immagine dev\'essere un\'immagine',
         'immages.max'=>'L\'immagine dev\'essere massimo di 1mb',
-    ];
-
+        ];
+        
     public function updatedTemporaryImages(){
         
         if($this->validate([
@@ -80,6 +82,9 @@ class AdCreateForm extends Component
         $this->validate();
 
         $this->ad = Category::find($this->category)->ads()->create($this->validate());
+        $this->ad->user()->associate(Auth::user());
+        $this->ad->save();
+      
         
         if(count($this->images)){
 
@@ -100,10 +105,13 @@ class AdCreateForm extends Component
             File::deleteDirectory(storage_path('/app/livewire-tmp'));
 
         }
-
+      
         $this->reset();
        session()->flash('message', 'Hai correttamente inserito il tuo annuncio, sarà pubblicato dopo la revisione.');
     }
+
+ 
+
 
     public function cleanForm()
     {

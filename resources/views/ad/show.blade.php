@@ -60,8 +60,8 @@
         <hr>
       
           
-          <p class="fs-4 fw-bold ms-5 ">Categoria: <span class="fw-normal me-5"> {{$ad->category->category}} </span>   Venditore: <span class="fw-normal ">{{Auth::user()->name ?? 'Sconosciuto' }}</span> </p>
-       
+          <p class="fs-4 fw-bold ms-5 ">Categoria: <span class="fw-normal me-5"> {{$ad->category->category}} </span>   Venditore: <span class="fw-normal ">{{$ad->user->name ?? 'Sconosciuto' }}</span> </p>
+        
         <hr>
        
         <div class="text-center d-flex justify-content-end ">
